@@ -1,0 +1,64 @@
+﻿@model List<string>
+
+<script type="text/javascript">
+    function Search() {
+
+        $.post("/Show/Search/", getData(), function (data) {
+            $('#searchResponse').slideUp('fast');
+            // sätter meddelande
+            var response = data;
+            //sätter contactFormResponse-divens innehåll.
+            $('#searchResponse').html(response);
+            // fäller ner diven.
+            $('#searchResponse').slideDown('slow');
+        });
+    }
+
+    function getData() {
+        var qq = $('#searchfield').val().toString();
+
+        return { query: qq }
+    }
+
+    function showTec() {
+        if ($('#tecMore').is(':visible')) {
+            $('#tecShowMore').html("<p style='text-align: right;' id='tecShowMore'><a href='javascript:showTec()' class='show'>Visa fler..</a></p>");
+            $('#tecMore').slideUp('slow');
+        }
+        else {
+            $('#tecShowMore').html("<p style='text-align: right;' id='tecShowMore'><a href='javascript:showTec()' class='show'>Visa mindre..</a></p>");
+            $('#tecMore').slideDown('slow');
+        }
+    }
+
+    function showWord() {
+        if ($('#wordMore').is(':visible')) {
+            $('#wordShowMore').html("<p style='text-align: right;' id='tecShowMore'><a href='javascript:showWord()' class='show'>Visa fler..</a></p>");
+            $('#wordMore').slideUp('slow');
+        }
+        else {
+            $('#wordShowMore').html("<p style='text-align: right;' id='tecShowMore'><a href='javascript:showWord()' class='show'>Visa mindre..</a></p>");
+            $('#wordMore').slideDown('slow');
+        }
+    }
+</script>
+<div class="sb_box">
+    <h3>Sök</h3>
+    <div id="search">
+        <form id="searchForm" name="searchForm" method="post" action="javascript:Search()">
+            <input list="tecniques" type="text" value="" size="10" id="searchfield" title="Sökfält" onfocus="clearText(this)" onblur="clearText(this)" />
+            <datalist id="tecniques" style="color: Red;">
+                @{
+                    foreach (var item in Model)
+                    {
+                        <option value="@item" />
+                    }
+                }
+            </datalist>
+            <input type="button" value="Sök" class="btnSend" id="searchbutton" title="Search" onclick="javascript:Search()" />
+        </form>
+    </div>
+    <br />
+</div>
+<div id="searchResponse" class="sb_box"></div>
+

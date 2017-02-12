@@ -1,0 +1,9 @@
+﻿@model IEnumerable<GraderaPublic.Models.TECHNICS>
+
+@{
+    foreach (var item in Model)
+    {
+        <li><a href="../../Show/Tec/@item.name">@item.name<span>@item.Type.Name</span></a></li>
+    }
+}
+

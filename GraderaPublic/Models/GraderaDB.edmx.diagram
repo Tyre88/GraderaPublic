@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="65036737a11341ac839bde7603d42d8d" Name="Diagram1">
+        <EntityTypeShape EntityType="DAL.Account" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DAL.Advertisement" Width="1.5" PointX="5.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="DAL.AdvertisementClicks" Width="1.5" PointX="8" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DAL.Combination" Width="1.5" PointX="0.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="DAL.Combination_Technique" Width="1.5" PointX="3" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DAL.Image" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="DAL.Movie" Width="1.5" PointX="5.25" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DAL.Search" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DAL.TECHNICS" Width="1.5" PointX="3" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="DAL.Technique" Width="1.5" PointX="9.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DAL.Type" Width="1.5" PointX="0.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DAL.Wordlist" Width="1.5" PointX="0.75" PointY="10.75" IsExpanded="true" />
+        <AssociationConnector Association="DAL.Advertisement____Clicks" ManuallyRouted="false" />
+        <AssociationConnector Association="DAL.Combination__Combination_Technique" ManuallyRouted="false" />
+        <AssociationConnector Association="DAL.Tec__Img" ManuallyRouted="false" />
+        <AssociationConnector Association="DAL.Tec__Movie" ManuallyRouted="false" />
+        <AssociationConnector Association="DAL.Type____Tec" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="DAL.AdvertisementShow" Width="1.5" PointX="8" PointY="10.25" />
+        <AssociationConnector Association="DAL.FK__Advertise__Adver__0C3BC58A" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

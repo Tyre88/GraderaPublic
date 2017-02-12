@@ -1,0 +1,34 @@
+﻿@model GraderaPublic.Models.TECHNICS
+@{
+    ViewBag.Title = "Gradera -> " + @Html.DisplayFor(model => model.name);
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Html.DisplayFor(model => model.name) <span style="float: right; margin-right: 10px;">@Html.DisplayFor(model => model.belt)</span></h2>
+
+<div class="content_box">
+    <div class="col_w280 float_l">
+        @if (Model.desc != null)
+        {
+            @Html.Raw(HttpUtility.HtmlDecode(Model.desc))
+        }
+        else
+        {
+            @Html.Raw(string.Format("<a href='javascript:showFeedback()'><i>Det finns ingen text. Skicka gäna in ett förslag på en text.</i></a>"));
+        }
+    </div>
+
+    <div class="col_w280 float_r">
+        <h5>Fler tekniker på @Html.DisplayFor(model => model.belt)</h5>
+        <ul class="lbe_list">
+            @{Html.RenderAction("Tecniques", "Show", new { belt = Model.belt, name = Model.name });}
+        </ul>
+    </div>
+</div>
+<div style="clear:both;"><br /></div>
+
+@{Html.RenderAction("Picture", "Show", new { id = Model.id });}
+
+<div class="content_box_w_top_border" id="content_movie">
+    @{Html.RenderAction("Movie", "Show", new { id = Model.id });}
+</div>

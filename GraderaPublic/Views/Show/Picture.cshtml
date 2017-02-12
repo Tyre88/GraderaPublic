@@ -1,0 +1,18 @@
+﻿@model IEnumerable<GraderaPublic.Models.Image>
+
+
+@{
+    if (Model.Count() >= 1)
+    {
+        <div class="content_box_w_top_border" id="content_picture">
+            @foreach (var item in Model)
+                {
+                @*<a href="../../Image/@item.TECHNIC.belt/@item.url" title="@item.TECHNIC.name">*@
+                <img src="../../Image/@item.TECHNICS.belt/@item.url" alt="@item.TECHNICS.name" style="max-width: 600px;" />
+                            @*</a>*@
+            }
+        </div>
+    }
+}
+
+

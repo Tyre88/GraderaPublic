@@ -1,0 +1,5 @@
+﻿@model GraderaPublic.Models.AdvertisementModel
+
+<div class="@string.Format("{0}", Model.Position == 1 ? "TopAdvertisement" : "LeftAdvertisement")">
+    <img src="@Model.ImgURL" alt="@Model.Shop" onclick="javascript:RedirectToShop('@Model.Url', '@Model.ID');" />
+</div>

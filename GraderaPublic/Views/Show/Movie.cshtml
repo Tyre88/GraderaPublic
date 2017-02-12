@@ -1,0 +1,10 @@
+﻿@model IEnumerable<GraderaPublic.Models.Movie>
+
+@{
+    foreach (var item in Model)
+    {
+        <iframe title="@item.TECHNICS.name" class="youtube-player" type="text/html"
+                width="600" height="440" src="@item.url"
+                frameborder="0"></iframe>
+    }
+}

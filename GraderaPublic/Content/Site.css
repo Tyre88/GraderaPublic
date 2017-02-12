@@ -1,0 +1,93 @@
+﻿body {
+font: normal 11px/18px verdana, arial, tahoma, sans-serif;
+color: #333;
+padding-top: 40px;
+}
+
+.container
+{
+    margin: auto;
+    padding: 10px;
+    width: 960px;
+    height: 800px;
+    border: 1px solid black;
+}
+
+.nav
+{
+    margin: auto;
+    padding: 5px;
+    width: 900px;
+    height: 40px;
+    border: 1px solid black;
+}
+
+.nav ul
+{
+    list-style-type: none;
+    list-style: none;
+}
+
+.nav li
+{
+    width: 100px;
+    height: 30px;
+    background-color: Gray;
+    text-decoration: none;
+    text-align: center;
+    font-size: large;
+    padding-left: 10px;
+    z-index: 2;
+}
+
+.nav li a
+{
+    text-decoration: none;
+    color: Black;
+}
+
+.advertisementLeft
+{
+    width: 250px; 
+    height: 250px; 
+    text-align: center;
+}
+
+.productList
+{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.productList li:nth-child(odd)
+{
+    background-color: #2f2a23;
+}
+
+.productList > li
+{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.productList > li:hover
+{
+    background-color: #28241e;
+    color: #CCCC00;
+}
+
+.productList > li > a
+{
+    display: block;
+}
+
+.productList > li > a:hover
+{
+    text-decoration: none;
+}
+
+#searchResponse
+{
+    display: none;
+}

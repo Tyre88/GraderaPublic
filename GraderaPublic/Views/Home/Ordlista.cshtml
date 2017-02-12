@@ -1,0 +1,32 @@
+﻿@model IEnumerable<GraderaPublic.Models.Wordlist>
+
+@{
+    ViewBag.Title = "Gradera Judo - Ordlista";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Ordlista</h2>
+
+<div style="width: 350px; float: right; margin-left: 10px;">
+    @{
+        foreach (var item in Model)
+        {
+            if ((item.id % 2) == 1)
+            {
+                <p>@item.jpn -> @item.swe</p>
+            }
+        }
+    }
+</div>
+
+<div style="width: 350px;">
+    @{
+        foreach (var item in Model)
+        {
+            if ((item.id % 2) == 0)
+            {
+                <p>@item.jpn -> @item.swe</p>
+            }
+        }
+    }
+</div>
