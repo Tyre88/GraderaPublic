@@ -1,0 +1,144 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- TradeDoubler site verification 2050323 -->
+
+    <meta name="description" content="Graderings information" />
+    <meta name="keywords" content="Gradera, Gradering, Kyu, 5, 4, 3, 2, 1, Waza, Koshi, Te, Ashi, Shime, Osaekomi, Kansetsu, Masutemi, Yokosutemi, Judo, Budo, Kampsport, Bälte" />
+    <meta name="author" content="Victor Öhrström" />
+
+    <title>Gradera Judo - graderings information online</title>
+
+    <link media="(max-width: 960px)" href="../../Content/mobile.css" rel="stylesheet" type="text/css" />
+
+    <script src="../../js/headjs.min.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        head.js("/Scripts/jquery-1.5.1.min.js").js("/Scripts/jquery.validate.min.js").js("/Scripts/jquery.validate.unobtrusive.min.js").js("../../Content/Javascript/TecHover.js");
+        head.js("../../content/javascript/advertisement.js");
+    </script>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="~/Content/mobile.css" rel="stylesheet" />
+    
+</head>
+<body>
+    <div id="fb-root"></div>
+    <script type="text/javascript">
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/sv_SE/all.js#xfbml=1";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
+    <div class="navbar navbar-inverse navbar-static-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../">
+                    Gradera.nu
+                </a>
+
+                <div class="navbar-brand" style="margin-left: 10px;">
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                        <input type="hidden" name="cmd" value="_s-xclick">
+                        <input type="hidden" name="hosted_button_id" value="T7JUKPMPCKTBW">
+                        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                    </form>
+                </div>
+            </div>
+
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class=""><a href="../../">Hem</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Grader <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../../Home/Kyu5">5 kyu <img alt="5 kyu" src="../../Image/Belts/5Kyo.PNG" style="float: right; max-height: 20px; margin-right: 15px;" /></a></li>
+                            <li><a href="../../Home/Kyu4">4 kyu <img alt="4 kyu" src="../../Image/Belts/4Kyo.PNG" style="float: right; max-height: 20px; margin-right: 15px;" /></a></li>
+                            <li><a href="../../Home/Kyu3">3 kyu <img alt="3 kyu" src="../../Image/Belts/3Kyo.PNG" style="float: right; max-height: 20px; margin-right: 15px;" /></a></li>
+                            <li><a href="../../Home/Kyu2">2 kyu <img alt="2 kyu" src="../../Image/Belts/2Kyo.PNG" style="float: right; max-height: 20px; margin-right: 15px;" /></a></li>
+                            <li><a href="../../Home/Kyu1">1 kyu <img alt="1 kyu" src="../../Image/Belts/1Kyo.PNG" style="float: right; max-height: 20px; margin-right: 15px;" /></a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../Home/Technique">Tekniker</a></li>
+                    <li><a href="../../Home/Ordlista">Ordlista</a></li>
+                    <li><a href="../../Home/Kodord">Judons kodord</a></li>
+                    <li><a href="http://club.gradera.nu/external.html#/show/form/TestKlubb/Beta" target="_blank">Gradera klubb</a></li>
+
+                    <li>
+                        <center>
+                            @{Html.RenderAction("GetAdvertisements", "Advertisement", new { pos = "left" });}
+                        </center>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <center>
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- Gradera-Banner -->
+            <ins class="adsbygoogle"
+                 style="display:inline-block;width:320px;height:100px"
+                 data-ad-client="ca-pub-7325257911988484"
+                 data-ad-slot="8437784316"></ins>
+            <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </center>
+
+        @RenderBody()
+    </div>
+
+    <footer class="modal-footer">
+        <div class="container">
+            <p>
+                <a href="/Home/License">Creative commons</a> <img style="height: 10px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Cc.logo.circle.svg/1024px-Cc.logo.circle.svg.png" /> 2011-2017 | <a href="../../">Gradera.nu</a> | Ett arbete av <a href="mailto:victor@webbdudes.se">Victor Öhrström</a>
+            </p>
+        </div>
+    </footer>
+
+    @* 
+        SCRIPTS
+    *@
+
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-27509427-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -2,7 +2,9 @@
 
 @{
     ViewBag.Title = "Gradera Judo - Ordlista";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    //Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = Request.Browser.IsMobileDevice ? "~/Views/Shared/_LayoutMobile.cshtml"
+                                            : "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Ordlista</h2>

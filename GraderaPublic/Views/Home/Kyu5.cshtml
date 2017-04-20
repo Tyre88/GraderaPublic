@@ -1,6 +1,8 @@
 ﻿@{
     ViewBag.Title = "Gradera Judo - 5 Kyu";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    //Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = Request.Browser.IsMobileDevice ? "~/Views/Shared/_LayoutMobile.cshtml"
+                                            : "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Vitt bälte med gul markering</h2>
@@ -11,7 +13,9 @@
 </ul>
 <p><em>Ukemi</em> (fallteknik)</p>
 <ul class="tmo_list">
+    <li>Framåt kullerbytta</li>
     <li><a href="../../Show/tec/ushiro ukemi">Bakåtfall</a></li>
+    <li>Grunden till sidofall</li>
 </ul>
 <p><em>Kumi kata</em> (greppteknik)</p>
 <ul class="tmo_list">
@@ -21,64 +25,120 @@
 <ul class="tmo_list">
     <li><a href="../../show/tec/Osoto-Otoshi" hover="true" tec="Osoto-Otoshi">Osoto-Otoshi</a></li>
     <li><a href="../../show/tec/Ouchi-gari" hover="true" tec="Ouchi-gari">Ouchi-gari</a></li>
-    <li><a href="../../show/tec/Deashi-harai" hover="true" tec="Deashi-harai">Deashi-harai</a></li>
-    <li><a href="../../show/tec/Uki-goshi" hover="true" tec="Uki-goshi">Uki-goshi</a></li>
+    <li><a href="../../show/tec/O-goshi" hover="true" tec="O-goshi">O-goshi</a></li>
+    @*<li><a href="../../show/tec/Deashi-harai" hover="true" tec="Deashi-harai">Deashi-harai</a></li>
+    <li><a href="../../show/tec/Uki-goshi" hover="true" tec="Uki-goshi">Uki-goshi</a></li>*@
 </ul>
 <p><em>Osae komi waza</em> (fasthållningsteknik)</p>
 <ul class="tmo_list">
     <li><a href="../../show/tec/Mune-Gatame">Mune-Gatame</a></li>
-    <li><a href="../../show/tec/Kesa-gatame">Kesa-gatame</a></li>
+    @*<li><a href="../../show/tec/Kesa-gatame">Kesa-gatame</a></li>*@
     <li><a href="../../show/tec/Kuzure-kesa-gatame">Kuzure-kesa-gatame</a></li>
 </ul>
-<p><em>Du bör även kunna..</em></p>
+@*<p><em>Du bör även kunna..</em></p>
 <ul class="tmo_list">
     <li>Komma in på fasthållningarna från olika lägen.</li>
     <li>Behålla kontrollen när motpartern försöker ta sig loss.</li>
     <li>Mairisignalera för att markera att man ger upp.</li>
     <li>Ta på judogin på ett korrekt sätt och kunna knyta bältet.</li>
+</ul>*@
+
+<p><em>Det här skall du även veta...</em></p>
+<ul class="tmo_list">
+    <li>Vi hälsar alltid innan vi går på och av judomattan.</li>
+    <li>Vi hälsar alltid innan vi börjar och efter att vi slutat öva med en partner.</li>
+    <li>Hajime – betyder börja.</li>
+    <li>Mate – betyder bryt.</li>
+    <li>Tori – den som utför tekniken.</li>
+    <li>Uke – den som tekniken utförs på.</li>
 </ul>
+
+<p><em>Du ska även kunna...</em></p>
+<ul class="tmo_list">
+    <li>Komma in på valfri fasthållning från olika lägen.</li>
+    <li>Behålla kontrollen när motståndaren försöker ta sigloss.</li>
+    <li>Alla olika sätt att signalera att du ger upp.</li>
+    <li>Ta på dig judogi på ett korrekt sätt och kunna knyta bältet.</li>
+    <li>En armhävning på knä, en situps samt enknäböj.</li>
+</ul>
+
 <p><em>Randori waza</em></p>
 <ul class="tmo_list">
     <li>Ne waza randori</li>
 </ul>
+
+
 <br />
+
+
 <h2>Gult bälte</h2>
 <p><em>Du bör vara fyllda 7 år. Du bör kunna följande</em></p>
 <p><em>Ukemi</em></p>
 <ul class="tmo_list">
     <li>Bakåtfall i rörelse</li>
+    <li><a href="../../show/tec/yoko ukemi">Sidofall</a></li>
+    <li>Bakåt kullerbytta</li>
+    <li>Hjula</li>
 </ul>
+
+<p><em>Kumi-kata</em></p>
+<ul class="tmo_list">
+    <li>Kunna nackgrepp (i nackslaget och ärm) åt både höger och vänster.</li>
+</ul>
+
 <p><em>Nage waza</em> (kastteknik)</p>
 <ul class="tmo_list">
+    <li><a href="../../show/tec/Kosoto-gari" hover="true" tec="Kosoto-gari">Kosoto-gari</a></li>
     <li><a href="../../show/tec/Kouchi-gari" hover="true" tec="Kouchi-gari">Kouchi-gari</a></li>
-    <li><a href="../../show/tec/O-goshi" hover="true" tec="O-goshi">O-goshi</a></li>
-    <li><a href="../../show/tec/Koshi-guruma" hover="true" tec="Koshi-guruma">Koshi-guruma</a></li>
-    <li><a href="../../show/tec/Ippon-seoi-nage" hover="true" tec="Ippon-seoi-nage">Ippon-seoi-nage</a></li>
+    @*<li><a href="../../show/tec/O-goshi" hover="true" tec="O-goshi">O-goshi</a></li>*@
+    @*<li><a href="../../show/tec/Ippon-seoi-nage" hover="true" tec="Ippon-seoi-nage">Ippon-seoi-nage</a></li>*@
+    <li><a href="../../show/tec/Hiza-guruma" hover="true" tec="Hiza-guruma">Hiza-guruma</a></li>
     <li><a href="../../show/tec/Eri-seoi-nage">Eri-seoi-nage</a></li>
+
+    <li><a href="../../show/tec/Koshi-guruma" hover="true" class="req-12" tec="Koshi-guruma">Koshi-guruma</a></li>
 </ul>
 <p><em>Osae komi waza</em> (fasthållningsteknik)</p>
 <ul class="tmo_list">
     <li><a href="../../show/tec/Kami-shiho-gatame">Kami-shiho-gatame</a></li>
-    <li>Kuzure-kami-shiho-gatame</li>
+    <li><a href="../../show/tec/Tate-shiho-gatame">Tate-shiho-gatame</a></li>
+    @*<li>Kuzure-kami-shiho-gatame</li>*@
 </ul>
-<p><em>Du skall även kunna..</em></p>
+@*<p><em>Du skall även kunna..</em></p>
 <ul class="tmo_list">
     <li>Komma in på fasthållningarna från olika lägen.</li>
     <li>Behålla kontrollen när motpartern försöker ta sig loss.</li>
     <li>Ett par sätt att ta sig ur fasthållningarna.</li>
     <li>Minst ett sätt att vända uke, som ligger på mage.</li>
+</ul>*@
+
+<p><em>Det här skall du veta...</em></p>
+<ul class="tmo_list">
+    <li>Judo betyder "den mjuka vägen".</li>
+    <li>Alla kan träna judo, oavsett om man vill tävla eller inte.</li>
+    <li>När man tar fasthållning i judo räknas tiden från att domaren har dömt Osaekomi, från och med då gäller det att hålla kvar fasthållningen.</li>
 </ul>
+
+<p><em>Det här skapp du även kunna...</em></p>
+<ul class="tmo_list">
+    <li>Minst ett sätt att vända uke till ryggläge från försvarsposition påmage eller bänkposition.</li>
+    <li>Komma in på valfri fasthållning från olika lägen.</li>
+    <li>Behålla kontrollen när motståndaren försöker ta sigloss.</li>
+    <li>Ett par sätt att ta sig ur olikafasthållningar.</li>
+    <li>Tre armhävningar, tre situps samt tre knäböj.</li>
+    <li>Genomföra samtliga kast till denna grad åt både höger och vänster.</li>
+</ul>
+
 <p><em>Randori</em></p>
 <ul class="tmo_list">
     <li>Tachi waza randori</li>
 </ul>
-<p><em>Det här bör du veta..</em></p>
+@*<p><em>Det här bör du veta..</em></p>
 <ul class="tmo_list">
     <li>Alla kan träna judo oavsett om man vill tävla eller inte.</li>
     <li>Judo är en disciplinerad idrott, där man följer tränarens anvisningar.</li>
     <li>Hajime betyder börja.</li>
     <li>Mate betyder bryt.</li>
-</ul>
+</ul>*@
 
 @*<div class="content_box">
                     <div class="col_w280 float_l">

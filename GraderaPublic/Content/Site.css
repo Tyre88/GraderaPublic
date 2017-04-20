@@ -91,3 +91,44 @@ padding-top: 40px;
 {
     display: none;
 }
+
+
+.req-12
+{
+    margin-top: 15px;
+    /*border: 1px solid black;
+    padding: 5px;*/
+    display: block;
+
+}
+
+.req-12:after
+{
+    content: 'Rekommenderat från 12 år.';
+    float: right;
+    color: #a58d6e;
+}
+
+
+.req-14
+{
+    margin-top: 15px;
+    /*border: 1px solid black;
+    padding: 5px;*/
+    display: block;
+
+}
+
+.req-14:after
+{
+    content: 'Rekommenderat från 14 år.';
+    float: right;
+    color: #a58d6e;
+}
+
+p.req-12 + ul,
+p.req-14 + ul
+{
+    border: 1px solid #a58d6e;
+    padding: 5px;
+}

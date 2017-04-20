@@ -1,6 +1,8 @@
 ﻿@{
     ViewBag.Title = "Gradera Judo - 4 Kyu";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    //Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = Request.Browser.IsMobileDevice ? "~/Views/Shared/_LayoutMobile.cshtml"
+                                            : "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Gult bälte med orange markering</h2>
@@ -8,31 +10,43 @@
 
 <p><em>Ukemi</em> (fallteknik)</p>
 <ul class="tmo_list">
-    <li><a href="../../show/tec/mae mawari ukemi">Rullande framåt fall</a></li>
-    <li><a href="../../show/tec/yoko ukemi">Sidofall</a></li>
+    <li><a href="../../show/tec/mae mawari ukemi">Rullande framåtfall.</a></li>
+    @*<li><a href="../../show/tec/yoko ukemi">Sidofall</a></li>*@
+    <li>Grenkullerbytta bakåt.</li>
 </ul>
 
-<p><em>Kuzushi</em> (Balansbrytning)</p>
+@*<p><em>Kuzushi</em> (Balansbrytning)</p>
 <ul class="tmo_list">
     <li>De fyra grundläggande riktningar som balansen kan bryta.</li>
+</ul>*@
+
+<p><em>Kumi-kata</em></p>
+<ul class="tmo_list">
+    <li>Kunna bryta motståndarens grepp när han/hon håller i slaget.</li>
 </ul>
 
 <p><em>Nage waza</em> (kastteknik)</p>
 <ul class="tmo_list">
-    <li><a href="../../show/tec/Kosoto-gari" hover="true" tec="Kosoto-gari">Kosoto-gari</a></li>
+    <li><a href="../../show/tec/Deashi-harai" hover="true" tec="Deashi-harai">Deashi-harai</a></li>
+    <li><a href="../../show/tec/Kosoto-gake" hover="true" tec="Kosoto-gake">Kosoto-gake</a></li>
+    <li><a href="../../show/tec/Ippon-seoi-nage" hover="true" tec="Ippon-seoi-nage">Ippon-seoi-nage</a></li>
+    <li><a href="../../show/tec/Morote-seoi-nage" hover="true" tec="Morote-seoi-nage">Morote-seoi-nage</a></li>
+    <li><a href="../../show/tec/Tsurikomi-goshi" hover="true" tec="Tsurikomi-goshi">Tsurikomi-goshi</a></li>
+    <li class="req-12"><a href="../../show/tec/Kubi-nage">Kubi-nage</a></li>
+    @*<li><a href="../../show/tec/Kosoto-gari" hover="true" tec="Kosoto-gari">Kosoto-gari</a></li>
     <li><a href="../../show/tec/Kosoto-gake" hover="true" tec="Kosoto-gake">Kosoto-gake</a></li>
     <li><a href="../../show/tec/Tsurikomi-goshi" hover="true" tec="Tsurikomi-goshi">Tsurikomi-goshi</a></li>
     <li><a href="../../show/tec/Morote-seoi-nage" hover="true" tec="Morote-seoi-nage">Morote-seoi-nage</a></li>
-    <li><a href="../../show/tec/Kubi-nage">Kubi-nage</a></li>
+    <li><a href="../../show/tec/Kubi-nage">Kubi-nage</a></li>*@
 </ul>
 
 <p><em>Osae komi waza</em> (fasthållningsteknik)</p>
 <ul class="tmo_list">
-    <li><a href="../../show/tec/Yoko-shiho-gatame">Yoko-shiho-gatame</a></li>
+    <li><a href="../../show/tec/Ushiro-kesa-gatame">Ushiro-kesa-gatame</a></li>
     <li><a href="../../show/tec/Kuzure-yoko-shiho-gatame">Kuzure-yoko-shiho-gatame</a></li>
 </ul>
 
-<p><em>Kansetu waza</em> (armlåsteknik)</p>
+@*<p><em>Kansetu waza</em> (armlåsteknik)</p>
 <ul class="tmo_list">
     <li><a href="../../show/tec/Ude-hishigi-juji-gatame">Ude-hishigi-juji-gatame</a></li>
 </ul>
@@ -40,9 +54,9 @@
 <p><em>Shime waza</em> (halslåsteknik)</p>
 <ul class="tmo_list">
     <li><a href="../../show/tec/Gyaku-juji-jime">Gyaku-juji-jime</a></li>
-</ul>
+</ul>*@
 
-<p><em>Du bör även kunna</em></p>
+@*<p><em>Du bör även kunna</em></p>
 <ul class="tmo_list">
     <li>Komma in på katame waza från olika lägen.</li>
     <li>Behålla kontrollen när motparten försöker ta sig loss.</li>
@@ -58,6 +72,26 @@
     <li>Kuzushi betyder balansbrytning.</li>
     <li>Tsukuri betyder ingång/placering.</li>
     <li>Kake betyder kast.</li>
+</ul>*@
+
+<p><em>Det här skall du veta...</em></p>
+<ul class="tmo_list">
+    <li>På tävling kan man få poängen Waza-ari eller Ippon på kasttekniker (nagewaza).</li>
+    <li>Man får också poäng om man håller fast motståndaren i Osae-komi-waza, Waz-ari efter 10-19 sekunder och Ippon efter 20 sekunder</li>
+    <li>Man vinner en judomatch när man får Ippon (Ippon = full poäng).</li>
+</ul>
+
+<p><em>Det här skall du även kunna...</em></p>
+<ul class="tmo_list">
+    <li>Minst två sätt att vända uke till ryggläge från försvarsposition påmage eller bänkposition.</li>
+    <li>Komma in på valfri fasthållning från olika lägen</li>
+    <li>Behålla kontrollen när motståndaren försöker ta sig loss.</li>
+    <li>Ett par sätt att ta sig ur olika fasthållningar.</li>
+    <li>Minst ett sätt att få loss benet, som uke fångat med sina ben.</li>
+    <li>Minst två sätt att vända uke, när denne anfaller mellan benen på tori som ligger på rygg.</li>
+    <li>Två valfria kombinationer i tachi-waza</li>
+    <li>Fem armhävningar, fem situps samt fem knäböj.</li>
+    <li>Genomföra samtliga kast till denna grad åt både höger och vänster</li>
 </ul>
 
 <p><em>Randori</em></p>
@@ -70,43 +104,58 @@
 
 <p><em>Ukemi</em> (fallteknik)</p>
 <ul class="tmo_list">
-    <li>Rullande fall framåt åt både höger och vänster till stående position och till liggande position</li>
+    <li><a href="../../show/tec/mae mawari ukemi">Rullande framåtfall åt både höger och vänster till stående position och till liggande position.</a></li>
+    @*<li><a href="../../show/tec/yoko ukemi">Sidofall</a></li>*@
+    <li>Hjula åt både höger och vänster.</li>
 </ul>
 
-<p><em>Kumi kata</em> (greppteknik)</p>
+@*<p><em>Kuzushi</em> (Balansbrytning)</p>
+    <ul class="tmo_list">
+        <li>De fyra grundläggande riktningar som balansen kan bryta.</li>
+    </ul>*@
+
+<p><em>Kumi-kata</em></p>
 <ul class="tmo_list">
-    <li>Kunna nackgrepp (i nackslag och ärm) höger och vänster</li>
-    <li>Kunna bryta motståndarens grepp när han/hon håller i ärmen</li>
+    <li>Kunna höger och vänster ryggrepp.</li>
+    <li>Kunna bryta motståndarens grepp när han/hon håller i ärmen.</li>
 </ul>
 
 <p><em>Nage waza</em> (kastteknik)</p>
 <ul class="tmo_list">
     <li><a href="../../show/tec/Osoto-gari" hover="true" tec="Osoto-gari">Osoto-gari</a></li>
-    <li><a href="../../show/tec/Seoi-Otoshi" hover="true" tec="Seoi-Otoshi">Seoi-Otoshi</a></li>
     <li><a href="../../show/tec/Tsuri-goshi" hover="true" tec="Tsuri-goshi">Tsuri-goshi</a></li>
-    <li><a href="../../show/tec/Hiza-guruma" hover="true" tec="Hiza-guruma">Hiza-guruma</a></li>
+    <li><a href="../../show/tec/Tai-Otoshi" hover="true" tec="Tai-Otoshi">Tai-Otoshi</a></li>
+    <li><a href="../../show/tec/Uchi-mata" hover="true" tec="Uchi-mata">Uchi-mata</a></li>
     <li><a href="../../show/tec/Harai-goshi" hover="true" tec="Harai-goshi">Harai-goshi</a></li>
+    @*<li><a href="../../show/tec/Kosoto-gari" hover="true" tec="Kosoto-gari">Kosoto-gari</a></li>
+        <li><a href="../../show/tec/Kosoto-gake" hover="true" tec="Kosoto-gake">Kosoto-gake</a></li>
+        <li><a href="../../show/tec/Tsurikomi-goshi" hover="true" tec="Tsurikomi-goshi">Tsurikomi-goshi</a></li>
+        <li><a href="../../show/tec/Morote-seoi-nage" hover="true" tec="Morote-seoi-nage">Morote-seoi-nage</a></li>
+        <li><a href="../../show/tec/Kubi-nage">Kubi-nage</a></li>*@
 </ul>
 
 <p><em>Osae komi waza</em> (fasthållningsteknik)</p>
 <ul class="tmo_list">
-    <li><a href="../../show/tec/Tate-shiho-gatame">Tate-shiho-gatame</a></li>
-    <li><a href="../../show/tec/Ushiro-kesa-gatame">Ushiro-kesa-gatame</a></li>
+    <li><a href="../../show/tec/Yoko-shiho-gatame">Yoko-shiho-gatame</a></li>
+    <li><a href="../../show/tec/Kesa-gatame" class="req-12">Kesa-gatame</a></li>
+    @*<li><a href="../../show/tec/Kuzure-yoko-shiho-gatame">Kuzure-yoko-shiho-gatame</a></li>*@
 </ul>
 
-<p><em>Kansetsu waza</em> (armlåsteknik)</p>
+<p class="req-14"><em>Kansetsu waza</em> (armlåsteknik)</p>
 <ul class="tmo_list">
     <li><a href="../../show/tec/Ude-garami">Ude-garami</a></li>
+    <li><a href="../../show/tec/Ude-hishigi-juji-gatame">Juji-gatame</a></li>
 </ul>
 
-<p><em>Shime waza</em> (halslåsteknik)</p>
+<p class="req-14"><em>Shime waza</em> (halslåsteknik)</p>
 <ul class="tmo_list">
-    <li><a href="../../show/tec/Okuri-eri-jime">Okuri-eri-jime</a></li>
+    @*<li><a href="../../show/tec/Okuri-eri-jime">Okuri-eri-jime</a></li>*@
+    <li><a href="../../show/tec/Gyaku-juji-jime">Gyaku-juji-jime</a></li>
     <li><a href="../../show/tec/Nami-juji-jime">Nami-juji-jime</a></li>
     <li><a href="../../show/tec/Kata-juji-jime">Kata-juji-jime</a></li>
 </ul>
 
-<p><em>Du bör även kunna</em></p>
+@*<p><em>Du bör även kunna</em></p>
 <ul class="tmo_list">
     <li>Komma in på katame waza från olika lägen.</li>
     <li>Behålla kontrollen när uke försöker ta sig loss.</li>
@@ -123,4 +172,25 @@
 <ul class="tmo_list">
     <li>Judo är bla bra för kondition, balans, styrka och rörlighet.</li>
     <li>På tävling kan man få Ippon, Waza-ari och Yuko.</li>
+</ul>*@
+
+<p><em>Det här skall du veta...</em></p>
+<ul class="tmo_list">
+    <li>Judo är bra för bland annat kondition, balans, styrka och rörlighet.</li>
+    <li>Tachi-waza betyder stående teknik och Ne-waza betyder matteknik.</li>
+</ul>
+
+<p><em>Det här skall du även kunna...</em></p>
+<ul class="tmo_list">
+    <li>Fullfölja i ne-waza efter två valfria kast.</li>
+    <li>Minst tre sätt att vända uke till ryggläge från försvarsposition påmage eller bänkposition.</li>
+    <li>Komma in på kontrollgrepp från olika lägen.</li>
+    <li>Behålla kontrollen när motståndaren försöker ta sig loss.</li>
+    <li>Ett par sätt att ta sig ur kontrollgreppen som fordrats till föregående grader.</li>
+    <li>Minst två sätt att få loss benet, som uke fångat med sina ben.</li>
+    <li>Minst ett sätt att passera benen på uke, som ligger på rygg.</li>
+    <li>Minst två sätt att vända uke, när denne anfaller mellan benen på tori som ligger på rygg.</li>
+    <li>Två valfria kombinationer i tachi-waza.</li>
+    <li>Tio armhävningar, tio situps samt tio knäböj.</li>
+    <li>Genomföra samtliga kast till denna grad åt både höger och vänster</li>
 </ul>

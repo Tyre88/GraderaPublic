@@ -1,7 +1,9 @@
 ﻿@model GraderaPublic.Models.TECHNICS
 @{
     ViewBag.Title = "Gradera -> " + @Html.DisplayFor(model => model.name);
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    //Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = Request.Browser.IsMobileDevice ? "~/Views/Shared/_LayoutMobile.cshtml"
+                                            : "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>@Html.DisplayFor(model => model.name) <span style="float: right; margin-right: 10px;">@Html.DisplayFor(model => model.belt)</span></h2>

@@ -2,57 +2,62 @@
 
 @{
     ViewBag.Title = "Gradera Judo - Tekniker";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    //Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = Request.Browser.IsMobileDevice ? "~/Views/Shared/_LayoutMobile.cshtml"
+                                            : "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Tekniker <span style="float: right; margin-right: 10px;">@Model.Count()</span></h2>
+<div id="techniques-container">
+    <h2>Tekniker <span style="float: right; margin-right: 10px;">@Model.Count()</span></h2>
 
-@{
-    int count = 0;
-    <div style="width: 290px; float: right; margin-left: 10px;">
-        @foreach (var item in Model)
-        {
-            if ((item.Type.ID % 2 == 1))
+    @{
+        int count = 0;
+        <div style="width: 290px; float: right; margin-left: 10px;">
+            @foreach (var item in Model)
             {
-                if (item.Type.ID != count)
+                if ((item.Type.ID % 2 == 1))
                 {
-                    count = @item.Type.ID;
+                    if (item.Type.ID != count)
+                    {
+                        count = @item.Type.ID;
 
-                    <h2>
-                        @item.Type.Name
-                        <span style="float: right; margin-right: 10px;">
-                            @{Html.RenderAction("TecCount", "Home", new { id = item.Type.ID });}
-                        </span>
-                    </h2>
-                                }
-                                <p><a href='../../show/tec/@item.name'>@item.name</a></p>
+                        <h2>
+                            @item.Type.Name
+                            <span style="float: right; margin-right: 10px;">
+                                @{Html.RenderAction("TecCount", "Home", new { id = item.Type.ID });}
+                            </span>
+                        </h2>
                                     }
-                                }
-    </div>
-}
+                                    <p><a href='../../show/tec/@item.name'>@item.name</a></p>
+                                        }
+                                    }
+        </div>
+    }
 
 
 
-@{
-    count = 0;
-    <div style="width: 290px; float: left; margin-left: 10px;">
-        @foreach (var item in Model)
-        {
-            if ((item.Type.ID % 2 == 0))
+    @{
+        count = 0;
+        <div style="width: 290px; float: left; margin-left: 10px;">
+            @foreach (var item in Model)
             {
-                if (item.Type.ID != count)
+                if ((item.Type.ID % 2 == 0))
                 {
-                    count = @item.Type.ID;
+                    if (item.Type.ID != count)
+                    {
+                        count = @item.Type.ID;
 
-                    <h2>
-                        @item.Type.Name
-                        <span style="float: right; margin-right: 10px;">
-                            @{Html.RenderAction("TecCount", "Home", new { id = item.Type.ID });}
-                        </span>
-                    </h2>
-                                }
-                                <p><a href='../../show/tec/@item.name'>@item.name</a></p>
+                        <h2>
+                            @item.Type.Name
+                            <span style="float: right; margin-right: 10px;">
+                                @{Html.RenderAction("TecCount", "Home", new { id = item.Type.ID });}
+                            </span>
+                        </h2>
                                     }
-                                }
-    </div>
-}
+                                    <p><a href='../../show/tec/@item.name'>@item.name</a></p>
+                                        }
+                                    }
+        </div>
+    }
+
+</div>

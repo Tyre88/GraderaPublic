@@ -1,6 +1,8 @@
 ﻿@{
     ViewBag.Title = "Gradera Judo - 1 Kyu";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    //Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = Request.Browser.IsMobileDevice ? "~/Views/Shared/_LayoutMobile.cshtml"
+                                            : "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Blått bälte med brun markering</h2>
@@ -9,12 +11,11 @@
 <p><em>Kumi kata</em> (greppteknik)</p>
 <ul class="tmo_list">
     <li>
-        Presentation av den egna kumi katan med flera olika sätt att få sitt grepp mot uke som vill ha följande grepp:
+        Presentation av ditt egna favoritgrepp, förklara hur och varför du gör det som du gör när motståndaren vill applicera följande grepp:
         <ul class="tmo_list">
-            <li>Höger framsida/nacke.</li>
-            <li>Vänster framsida/nacke.</li>
-            <li>Höger enarmsgrepp.</li>
-            <li>Vänster enarmsgrepp.</li>
+            <li>Ena armen i höger/vänsterslag.</li>
+            <li>Ena armen i höger/vänster nacke.</li>
+            <li>Höger/vänster greppning med en arm.</li>
         </ul>
     </li>
 </ul>
@@ -25,34 +26,45 @@
     <li><a href="../../show/tec/Osoto-guruma" hover="true" tec="Osoto-guruma">Osoto-guruma</a></li>
     <li><a href="../../show/tec/Uki-Otoshi" hover="true" tec="Uki-Otoshi">Uki-Otoshi</a></li>
     <li><a href="../../show/tec/Sumi-Otoshi" hover="true" tec="Sumi-Otoshi">Sumi-Otoshi</a></li>
-    <li><a href="../../show/tec/Sukui-nage" hover="true" tec="Sukui-nage">Sukui-nage</a></li>
+    @*<li><a href="../../show/tec/Sukui-nage" hover="true" tec="Sukui-nage">Sukui-nage</a></li>*@
     <li><a href="../../show/tec/Yoko-wakare" hover="true" tec="Yoko-wakare">Yoko-wakare</a></li>
-    <li><a href="../../show/tec/Harai-makikomi" hover="true" tec="Harai-makikomi">Harai-makikomi</a></li>
-    <li><a href="../../show/tec/Hane-makikomi" hover="true" tec="Hane-makikomi">Hane-makikomi</a></li>
+    <li><a href="../../show/tec/Kata-guruma" hover="true" tec="Kata-guruma">Kata-guruma</a></li>
+    @*<li><a href="../../show/tec/Harai-makikomi" hover="true" tec="Harai-makikomi">Harai-makikomi</a></li>
+    <li><a href="../../show/tec/Hane-makikomi" hover="true" tec="Hane-makikomi">Hane-makikomi</a></li>*@
 </ul>
 
 <p><em>Tokui Waza</em></p>
 <ul class="tmo_list">
-    <li>Presentation av det egna favoritkastet.</li>
+    <li>Visa ditt favoritkast och förklara hur och varför du gör det som du gör.</li>
+    <li>Visa din favoritfasthållning som en uppföljning på ditt favoritkast, förklara hur och varför du gör det som du gör.</li>
+    <li>Visa ditt favorithalslås som en uppföljning på ditt favoritkast, förklara hur och varför du gör det som du gör.</li>
+    <li>Visa ditt favoritarmlås som en uppföljning på ditt favoritkast och förklara hur och varför du gör det som du gör.</li>
 </ul>
 
-<p><em>Ne Waza</em></p>
+@*<p><em>Ne Waza</em></p>
 <ul class="tmo_list">
     <li>Visa ditt favoritarmlås och förklara hur och varför du gör det som du gör.</li>
     <li>Visa ditt favorithalslås och förklara hur och varför du gör det som du gör.</li>
-</ul>
+</ul>*@
 
-<p><em>Du bör även kunna</em></p>
+@*<p><em>Du bör även kunna</em></p>
 <ul class="tmo_list">
     <li>6 valfria kombinationer i tachi waza.</li>
     <li>5 valfria kontringar i tachi waza.</li>
     <li>4 sätt att ta över när uke attackerar tori som står på alla fyra.</li>
     <li>Kunna utföra samtliga tidigare tekniker åt både höger och vänster.</li>
+</ul>*@
+
+<p><em>Det här skall du även kunna...</em></p>
+<ul class="tmo_list">
+    <li>Sex valfria kombinationer i tachi-waza som utförs för att komma till tokui-waza eller fortsätta ifrån tokui-waza.</li>
+    <li>Fem valfria kontringar itachi-waza.</li>
+    <li>Genomföra samtliga kast till för denna grad åt både höger och vänster</li>
 </ul>
 
 
 <h2>Brunt bälte</h2>
-<p><em>Du bör vara fyllda 14 år. Du bör kunna följande.</em></p>
+<p><em>Du bör vara fyllda 15 år. Du bör kunna följande.</em></p>
 
 <p><em>Teori</em></p>
 <ul class="tmo_list">

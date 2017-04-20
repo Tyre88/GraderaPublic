@@ -1,47 +1,62 @@
 ﻿@{
     ViewBag.Title = "Gradera Judo - 2 Kyu";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    //Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = Request.Browser.IsMobileDevice ? "~/Views/Shared/_LayoutMobile.cshtml"
+                                            : "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Grönt bälte med blå markering</h2>
-<p><em>Du bör vara fyllda 12 år. Du bör kunna följande.</em></p>
+<p><em>Du bör vara fyllda 11 år. Du bör kunna följande.</em></p>
+
+<p><em>Ukemi</em></p>
+<ul class="tmo_list">
+    <li>Högt rullande framåtfall så kallat "fritt fall"</li>
+</ul>
 
 <p><em>Kumi kata</em> (greppteknik)</p>
 <ul class="tmo_list">
-    <li>Att kunna få sitt favoritgrepp från olika situationer.</li>
+    <li>Kunna få in sitt favoritgrepp när motståndaren greppar på olika sätt.</li>
 </ul>
 
 <p><em>Nage waza</em> (kastteknik)</p>
 <ul class="tmo_list">
+    <li><a href="../../show/tec/O-guruma" hover="true" tec="O-guruma">O-guruma</a></li>
+    <li><a href="../../show/tec/Ashi-guruma" hover="true" tec="Ashi-guruma">Ashi-guruma</a></li>
+    <li><a href="../../show/tec/Sumi-gaeshi" hover="true" tec="Sumi-gaeshi">Sumi-gaeshi</a></li>
     <li><a href="../../show/tec/Uki-waza" hover="true" tec="Uki-waza">Uki-waza</a></li>
+    <li><a href="../../show/tec/Yoko-Otoshi" hover="true" tec="Yoko-Otoshi">Yoko-Otoshi</a></li>
+    <li><a href="../../show/tec/Ushiro-goshi" hover="true" tec="Ushiro-goshi">Ushiro-goshi</a></li>
+    <li><a href="../../show/tec/Soto-makikomi" hover="true" tec="Soto-makikomi">Soto-makikomi</a></li>
+
+    @*<li><a href="../../show/tec/Uki-waza" hover="true" tec="Uki-waza">Uki-waza</a></li>
     <li><a href="../../show/tec/Yoko-Otoshi" hover="true" tec="Yoko-Otoshi">Yoko-Otoshi</a></li>
     <li><a href="../../show/tec/Tani-Otoshi" hover="true" tec="Tani-Otoshi">Tani-Otoshi</a></li>
     <li><a href="../../show/tec/Yoko-guruma" hover="true" tec="Yoko-guruma">Yoko-guruma</a></li>
     <li><a href="../../show/tec/Ushiro-goshi" hover="true" tec="Ushiro-goshi">Ushiro-goshi</a></li>
     <li><a href="../../show/tec/Ashi-guruma" hover="true" tec="Ashi-guruma">Ashi-guruma</a></li>
-    <li><a href="../../show/tec/Soto-makikomi" hover="true" tec="Soto-makikomi">Soto-makikomi</a></li>
+    <li><a href="../../show/tec/Soto-makikomi" hover="true" tec="Soto-makikomi">Soto-makikomi</a></li>*@
 </ul>
 
 <p><em>Osae komi waza</em> (fasthållningsteknik)</p>
 <ul class="tmo_list">
     <li><a href="../../show/tec/Makura-kesa-gatame">Makura-kesa-gatame</a></li>
-    <li><a href="../../show/tec/Sankaku-gatame">Sankaku-gatame</a> (rek fr 14 år)</li>
+    <li><a href="../../show/tec/Sankaku-gatame">Sankaku-gatame</a></li>
 </ul>
 
-<p><em>Kansetu waza</em> (armlåsteknik)</p>
+<p class="req-14"><em>Kansetu waza</em> (armlåsteknik)</p>
 <ul class="tmo_list">
     <li><a href="../../show/tec/Ude-hishigi-hara-gatame">Ude-hishigi-hara-gatame</a></li>
     <li><a href="../../show/tec/Ude-hishigi-waki-gatame">Ude-hishigi-waki-gatame</a></li>
-    <li><a href="../../show/tec/Ude-hishigi-sankaku-gatame">Ude-hishigi-sankaku-gatame</a></li>
+    @*<li><a href="../../show/tec/Ude-hishigi-sankaku-gatame">Ude-hishigi-sankaku-gatame</a></li>*@
 </ul>
 
-<p><em>Shime waza</em> (halslåsteknik)</p>
+<p class="req-14"><em>Shime waza</em> (halslåsteknik)</p>
 <ul class="tmo_list">
     <li><a href="../../show/tec/Kata-te-jime">Kata-te-jime</a></li>
     <li><a href="../../show/tec/Sankaku-jime">Sankaku-jime</a></li>
 </ul>
 
-<p><em>Du bör även kunna</em></p>
+@*<p><em>Du bör även kunna</em></p>
 <ul class="tmo_list">
     <li>Komma in på katame waza från olika lägen.</li>
     <li>Behålla kontrollen när motparten försöker ta sig loss.</li>
@@ -62,35 +77,70 @@
     <li>Ashi-waza = fot/benkastteknik</li>
     <li>Masutemi-waza = offerkastteknik där tori ligger på rygg</li>
     <li>Yokosutemi-waza = offerkastteknik där tori ligger på sida</li>
+</ul>*@
+
+<p><em>Det här skall du veta...</em></p>
+<ul class="tmo_list">
+    <li>Te-waza – Hand/skulderkastteknik.</li>
+    <li>Koshi-waza – Höftkastteknik.</li>
+    <li>Ashi-waza – Fot/benkastteknik</li>
+    <li>Ma-sutemi-waza – Offerkastteknik där Tori ligger på rygg. </li>
+    <li>Yoko-sutemi-waza – Offerkastteknik där Tori ligger på sidan.</li>
+</ul>
+
+<p><em>Det här skall du även kunna...</em></p>
+<ul class="tmo_list">
+    <li>Fullfölja i ne-waza efter fem valfria kast.</li>
+    <li>Minst sex sätt att vända uke till ryggläge från försvarsposition på mage eller bänkposition.</li>
+    <li>Komma in på kontrollgrepp från olika lägen.</li>
+    <li>Ett par sätt att ta sig ur kontrollgreppen som fordrats till föregående grader</li>
+    <li>Tre sätt att ta över, när uke attackerar tori som står på alla fyra.</li>
+    <li>Tre valfria kombinationer "höger ↔ vänster" i tachi-waza.</li>
+    <li>Tre valfria kombinationer "framåt ↔ bakåt" i tachi-waza.</li>
+    <li>Fem valfria kontringar i tachi-waza.</li>
+    <li>Genomföra samtliga kast till denna grad åt både höger och vänster.</li>
 </ul>
 
 <h2>Blått bälte</h2>
-<p><em>Du bör vara fyllda 13 år. Du bör kunna följande.</em></p>
+<p><em>Du bör vara fyllda 12 år. Du bör kunna följande.</em></p>
+
+<p><em>Kumi-kata</em></p>
+<ul class="tmo_list">
+    <li>Kunna förhindra franskt och ryskt grepp</li>
+</ul>
 
 <p><em>Nage waza</em> (kastteknik)</p>
 <ul class="tmo_list">
-    <li><a href="../../show/tec/Te-guruma" hover="true" tec="Te-guruma">Te-guruma</a></li>
+    <li><a href="../../show/tec/Uchi-mata" hover="true" tec="Uchi-mata">Uchi-mata "benteknik"</a></li>
+    <li><a href="../../show/tec/Hane-goshi" hover="true" tec="Hane-goshi">Hane-goshi</a></li>
+    <li><a href="../../show/tec/Tsubame-gaeshi" hover="true" tec="Tsubame-gaeshi">Tsubame-gaeshi</a></li>
+    <li><a href="../../show/tec/Ura-nage" hover="true" tec="Ura-nage">Ura-nage</a></li>
+    <li><a href="../../show/tec/Yoko-guruma" hover="true" tec="Yoko-guruma">Yoko-guruma</a></li>
+    <li><a href="../../show/tec/Yoko-gake" hover="true" tec="Yoko-gake">Yoko-gake</a></li>
+
+    @*<li><a href="../../show/tec/Te-guruma" hover="true" tec="Te-guruma">Te-guruma</a></li>
     <li><a href="../../show/tec/Tsubame-gaeshi" hover="true" tec="Tsubame-gaeshi">Tsubame-gaeshi</a></li>
     <li><a href="../../show/tec/Yoko-gake" hover="true" tec="Yoko-gake">Yoko-gake</a></li>
     <li><a href="../../show/tec/Kata-guruma" hover="true" tec="Kata-guruma">Kata-guruma</a></li>
     <li><a href="../../show/tec/Ura-nage" hover="true" tec="Ura-nage">Ura-nage</a></li>
     <li><a href="../../show/tec/Nidan Kosoto-gari" hover="false" tec="Nidan Kosoto-gari">Nidan Kosoto-gari</a></li>
     <li><a href="../../show/tec/Nidan Kosoto-gake" hover="false" tec="Nidan Kosoto-gake">Nidan Kosoto-gake</a></li>
-    <li><a href="../../show/tec/O-guruma" hover="true" tec="O-guruma">O-guruma</a></li>
+    <li><a href="../../show/tec/O-guruma" hover="true" tec="O-guruma">O-guruma</a></li>*@
 </ul>
 
 <p><em>Osae komi waza</em> (fasthållningsteknik)</p>
 <ul class="tmo_list">
     <li><a href="../../show/tec/Kata-gatame">Kata-gatame</a></li>
+    <li><a href="../../show/tec/Kata-gatame">Uki-gatame</a></li>
 </ul>
 
-<p><em>Kansetsu waza</em> (armlåsteknik)</p>
+<p class="req-14"><em>Kansetsu waza</em> (armlåsteknik)</p>
 <ul class="tmo_list">
     <li><a href="../../show/tec/Kannuki-gatame">Kannuki-gatame</a></li>
     <li><a href="../../show/tec/Ude-hishigi-hiza-gatame">Ude-hishigi-hiza-gatame</a></li>
 </ul>
 
-<p><em>Shime waza</em> (halslåsteknik)</p>
+<p class="req-14"><em>Shime waza</em> (halslåsteknik)</p>
 <ul class="tmo_list">
     <li><a href="../../show/tec/Sode-guruma-jime">Sode-guruma-jime</a></li>
     <li><a href="../../show/tec/Tsukkomi-jime">Tsukkomi-jime</a></li>
@@ -101,7 +151,7 @@
     <li><a href="../../Show/Tec/Nage-No-Kata(Ashi-waza)">3:dje serien i Nage no kata. (Ashi-waza)</a></li>
 </ul>
 
-<p><em>Du bör även kunna</em></p>
+@*<p><em>Du bör även kunna</em></p>
 <ul class="tmo_list">
     <li>Komma in på katame waza från olika lägen.</li>
     <li>Behålla kontrollen när motparten försöker ta sig loss.</li>
@@ -117,4 +167,22 @@
     <li>Renraku waza = kombinationsteknik.</li>
     <li>Kaeshi waza = kontringsteknik.</li>
     <li>Att kata är en av judons träningsformer och ha kännedom om Nage-no-kata.</li>
+</ul>*@
+
+<p><em>Det här skall du även veta...</em></p>
+<ul class="tmo_list">
+    <li>Renraku-waza – Kombinationsteknik</li>
+    <li>Kaeshi-waza – Kontringsteknik</li>
+</ul>
+
+<p><em>Det här skall du även kunna...</em></p>
+<ul class="tmo_list">
+    <li>Minst sju sätt att vända uke till ryggläge från försvarsposition på mage eller bänkposition.</li>
+    <li>Komma in på kontrollgrepp från olika lägen</li>
+    <li>Ett par sätt att ta sig ur kontrollgreppen som fordrats till föregående grader.</li>
+    <li>Fyra sätt att ta över, när uke attackerar tori som står på alla fyra</li>
+    <li>Fyra valfria kombinationer "höger ↔ vänster" itachi-waza.</li>
+    <li>Fyra valfria kombinationer "framåt ↔ bakåt" itachi-waza.</li>
+    <li>Sex valfria kontringar i tachi-waza</li>
+    <li>Genomföra samtliga kast till denna grad åt både höger och vänster</li>
 </ul>
