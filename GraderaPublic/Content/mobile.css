@@ -1,7 +1,7 @@
 ﻿body
 {
-    background-color: rgb(64, 57, 49);
-    color: #a58d6e;
+    background-color: rgb(64, 57, 49) !important;
+    color: #a58d6e !important;
 }
 
 h2

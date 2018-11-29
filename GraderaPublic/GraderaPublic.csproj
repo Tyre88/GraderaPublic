@@ -315,6 +315,7 @@
     <Content Include="images\advertisement\sbi\april2017.gif" />
     <Content Include="images\advertisement\sbi\sbi250x250.jpg" />
     <Content Include="images\getswish_qr.png" />
+    <Content Include="images\getswish_qr_small.png" />
     <Content Include="Image\Belts\1Kyo.PNG" />
     <Content Include="Image\Belts\2Kyo.PNG" />
     <Content Include="Image\Belts\3Kyo.PNG" />
