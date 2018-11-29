@@ -231,6 +231,7 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app.js" />
     <Content Include="Content\Annons\9172232013.jpg" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -268,6 +269,7 @@
     <Content Include="Content\images\templatemo_top.jpg" />
     <Content Include="Content\images\templatemo_wrapper.jpg" />
     <Content Include="Content\Javascript\Advertisement.js" />
+    <Content Include="Content\Javascript\etc.js" />
     <Content Include="Content\Javascript\index.js" />
     <Content Include="Content\Javascript\TecHover.js" />
     <Content Include="Content\mobile.css" />
@@ -305,9 +307,14 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="images\128.png" />
+    <Content Include="images\192.png" />
+    <Content Include="images\256.png" />
+    <Content Include="images\512.png" />
     <Content Include="images\advertisement\jabb\jabb_gradera.jpg" />
     <Content Include="images\advertisement\sbi\april2017.gif" />
     <Content Include="images\advertisement\sbi\sbi250x250.jpg" />
+    <Content Include="images\getswish_qr.png" />
     <Content Include="Image\Belts\1Kyo.PNG" />
     <Content Include="Image\Belts\2Kyo.PNG" />
     <Content Include="Image\Belts\3Kyo.PNG" />
@@ -524,6 +531,7 @@
       <DependentUpon>GraderaDB.edmx</DependentUpon>
     </Content>
     <Content Include="Content\jquery.lightbox-0.5.css" />
+    <Content Include="manifest.json" />
     <None Include="Properties\PublishProfiles\Release.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -537,6 +545,7 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="sw.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
