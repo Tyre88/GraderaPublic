@@ -132,3 +132,15 @@ p.req-14 + ul
     border: 1px solid #a58d6e;
     padding: 5px;
 }
+
+
+.g-button {
+    padding: 2px 10px;
+    background-color: #35312d;
+    color: #000000;
+    border-radius: 5px;
+    display: inline-block;
+    margin-bottom: 10px;
+    border: 1px solid black;
+    cursor: pointer;
+}

@@ -20,33 +20,33 @@ namespace GraderaPublic.Controllers
         {
             byte position = GetPosition(pos);
 
-            var advertisement = (from a in db.Advertisement
-                                 where a.Position == position && a.Active
-                                 select new AdvertisementModel
-                                 {
-                                     ID = a.ID,
-                                     ImgURL = a.ImgUrl,
-                                     Url = a.Url,
-                                     Shop = a.Shop,
-                                     Position = (byte)a.Position
-                                 }).ToList();
+            //var advertisement = (from a in db.Advertisement
+            //                     where a.Position == position && a.Active
+            //                     select new AdvertisementModel
+            //                     {
+            //                         ID = a.ID,
+            //                         ImgURL = a.ImgUrl,
+            //                         Url = a.Url,
+            //                         Shop = a.Shop,
+            //                         Position = (byte)a.Position
+            //                     }).ToList();
 
-            if (advertisement.Count > 0)
-            {
-                AdvertisementModel advertisementToShow = advertisement.PickRandom<AdvertisementModel>();
+            //if (advertisement.Count > 0)
+            //{
+            //    AdvertisementModel advertisementToShow = advertisement.PickRandom<AdvertisementModel>();
 
-                AdvertisementShow show = new AdvertisementShow()
-                {
-                    AdvertisementId = advertisementToShow.ID,
-                    Date = DateTime.Now,
-                    Page = Request.Url.AbsoluteUri
-                };
+            //    AdvertisementShow show = new AdvertisementShow()
+            //    {
+            //        AdvertisementId = advertisementToShow.ID,
+            //        Date = DateTime.Now,
+            //        Page = Request.Url.AbsoluteUri
+            //    };
 
-                db.AdvertisementShow.Add(show);
-                db.SaveChanges();
+            //    db.AdvertisementShow.Add(show);
+            //    db.SaveChanges();
 
-                return PartialView(advertisementToShow);
-            }
+            //    return PartialView(advertisementToShow);
+            //}
 
             return null;
         }

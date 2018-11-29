@@ -45,12 +45,6 @@ p
     display: none;
 }
 
-.youtube-player
-{
-    max-width: 100%;
-    height: 200px;
-}
-
 #content_picture
 {
     text-align: center;
@@ -77,4 +71,12 @@ p
 #techniques-container a
 {
     color: #a58d6e;
+}
+
+@media all and (max-width: 960px) {
+    .youtube-player
+    {
+        max-width: 100%;
+        height: 200px;
+    }
 }

@@ -17,12 +17,19 @@
     <script type="text/javascript">
         head.js("/Scripts/jquery-1.5.1.min.js").js("/Scripts/jquery.validate.min.js").js("/Scripts/jquery.validate.unobtrusive.min.js").js("../../Content/Javascript/TecHover.js");
         head.js("../../content/javascript/advertisement.js");
-
         head.js("../../content/Site.css");
+
+        head.js("https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js")
+            .js("https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular-animate.min.js")
+            .js("https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular-aria.min.js")
+            .js("https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular-messages.min.js")
+            .js("https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.5/angular-material.min.js");
+        head.js("../../content/javascript/index.js");
     </script>
 
     <link href="../../Content/templatemo_style.css" rel="stylesheet" type="text/css" />
     <link href="../../content/css/advertisement.css" rel="Stylesheet" type="text/css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.5/angular-material.min.css" rel="stylesheet" />
 
     <script language="javascript" type="text/javascript">
         function clearText(field) {
@@ -118,6 +125,18 @@
             });
         }
 
+        function showSwish() {
+            $('#swish').slideDown('slow', function () { });
+            $('#fader').fadeIn('slow', function () { });
+        }
+
+        function closeSwish() {
+            $('#swish').slideUp('slow', function () {
+            });
+            $('#fader').fadeOut('slow', function () {
+            });
+        }
+
         function closeFeedback() {
             $('#feedback').slideUp('slow', function () {
             });
@@ -127,7 +146,38 @@
     </script>
 
 </head>
-<body>
+<body ng-controller="index" style="height: auto;">
+
+    @*<div style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 150px;
+        line-height: 25px;
+        width: 100%;
+        background-color: rgba(0,0,0,.75);">
+            <span style="
+        text-align: center;
+        display: block;">
+                Kära användare av Gradera.nu! Denna sidan kan inte hållas vid liv av bara reklam vilket gör att för att fortsätta att hålla sidan vid liv så skulle jag vilja be om donationer. När det kommit in donationer för att kunna betala ett års upptid till så kommer denna banner att försvinna.
+                <br />
+                Du kan även handla i shoppen för att bidra till att gradera.nu hålls vid liv! <a href="https://shop.spreadshirt.se/graderajudo/" target="_blank">till shoppen!</a>
+
+                <div style="display: flex; width: 100%; align-items: center; justify-content: center;">
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                        <input type="hidden" name="cmd" value="_s-xclick">
+                        <input type="hidden" name="hosted_button_id" value="T7JUKPMPCKTBW">
+                        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                    </form>
+
+                    <a href="javascript:showSwish()"><img src="~/images/getswish_qr.png" style="max-width: 75px; margin-left: 20px;" /></a>
+                    <span style="margin-left: 25px;">Swish nummer: 0704-151586</span>
+                </div>
+
+            </span>
+        </div>*@
+
 
     <div id="fb-root"></div>
     <script type="text/javascript">
@@ -193,6 +243,19 @@
 
     </div>
 
+
+    <div id="swish" style="z-index:201;	text-align: left;	background-color: #28241e; display: none;	width: 700px; border: solid 1px;	position: fixed;	top: 100px;	z-index: 101;	left: 50%;	margin-left: -350px; padding: 10px;">
+        <p><a href="javascript:closeSwish()" style="float: right; background: none; ">Stäng</a></p>
+
+        <div class="content_box">
+
+            <img lazy-load="~/images/getswish_qr.png" style="max-width: 600px;" />
+
+            <p>Swish nummer: 0704-15 15 86</p>
+        </div>
+
+    </div>
+
     <div id="templamteo_body_wrapper">
         <div id="templatemo_wrapper">
             <div id="templatemo_main_top"></div>
@@ -211,6 +274,7 @@
                             <li><a href="../../Home/Kyu3">3 Kyu <img alt="5 kyu" src="../../Image/Belts/3Kyo.PNG" style="float: right; max-height: 20px;" /></a></li>
                             <li><a href="../../Home/Kyu2">2 Kyu <img alt="5 kyu" src="../../Image/Belts/2Kyo.PNG" style="float: right; max-height: 20px;" /></a></li>
                             <li><a href="../../Home/Kyu1">1 Kyu <img alt="5 kyu" src="../../Image/Belts/1Kyo.PNG" style="float: right; max-height: 20px;" /></a></li>
+                            @*<li><a href="https://shop.spreadshirt.se/graderajudo/" target="_blank">Shop</a></li>*@
                             <li><a href="../../Home/Technique">Tekniker</a></li>
                             @*<li><a href="../../Combinations">Kombinationer</a></li>*@
                             <li><a href="../../Home/Ordlista">Ordlista</a></li>
@@ -221,10 +285,10 @@
                         </ul>
                     </div>
 
-                <div class="sb_box_annons">
-                    <h6>Annons</h6>
-                    @{Html.RenderAction("GetAdvertisements", "Advertisement", new { pos = "left" });}
-                </div>
+                    <div class="sb_box_annons">
+                        <h6>Annons</h6>
+                        @{Html.RenderAction("GetAdvertisements", "Advertisement", new { pos = "left" });}
+                    </div>
 
                     @{Html.RenderAction("SearchDialog", "Show");}
 
@@ -238,6 +302,8 @@
                             <br />
                             <br />*@
 
+                        <a href="javascript:showSwish()"><img src="~/images/getswish_qr.png" style="max-width: 250px;" /></a>
+
                         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
                             <input type="hidden" name="cmd" value="_s-xclick">
                             <input type="hidden" name="hosted_button_id" value="T7JUKPMPCKTBW">
@@ -245,17 +311,16 @@
                             <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
                         </form>
 
-
                         <div class="sb_box">
                             <div class="fb-like" data-href="http://www.facebook.com/GraderaJudo" data-send="false" data-layout="box_count" data-width="120" data-show-faces="false" data-colorscheme="dark"></div>
 
                             <div id="google_play">
                                 <a href="https://play.google.com/store/apps/details?id=com.Gradera#?t=W251bGwsMSwyLDIxMiwiY29tLkdyYWRlcmEiXQ.." target="_blank">
-                                    <img src="../../Content/images/GooglePlay-Icon.png" alt="google play" style="max-width: 120px;" />
+                                    <img lazy-load="../../Content/images/GooglePlay-Icon.png" alt="google play" style="max-width: 120px;" />
                                 </a>
 
                                 <a href="https://itunes.apple.com/us/app/gradera/id955246650?l=sv&ls=1&mt=8" target="_blank">
-                                    <img src="../../Content/images/app-store-icon-1024x512.png" alt="app store" style="max-width: 120px;" />
+                                    <img lazy-load="../../Content/images/app-store-icon-1024x512.png" alt="app store" style="max-width: 120px;" />
                                 </a>
                             </div>
 
@@ -293,7 +358,7 @@
             </div> <!-- end of main -->
             <div id="templatemo_footer">
 
-                <a href="/Home/License">Creative commons</a> <img style="height: 10px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Cc.logo.circle.svg/1024px-Cc.logo.circle.svg.png" /> 2011-2017 | <a href="../../">Gradera.nu</a> | Ett arbete av <a href="mailto:victor@webbdudes.se">Victor Öhrström</a>
+                <a href="/Home/License">Creative commons</a> <img style="height: 10px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Cc.logo.circle.svg/1024px-Cc.logo.circle.svg.png" /> 2011-2018 | <a href="../../">Gradera.nu</a> | Ett arbete av <a href="mailto:victor@webbdudes.se">Victor Öhrström</a>
 
             </div> <!-- end of templatemo_footer -->
 
@@ -307,6 +372,27 @@
             mf.src = "//cdn.mouseflow.com/projects/84096e29-2946-4fcd-84af-788d38b80b82.js";
             document.getElementsByTagName("head")[0].appendChild(mf);
         })();
+    </script>
+
+    <script type="text/ng-template" id="donate.html">
+        <div style="padding: 15px;">
+            <p>Kära användare av Gradera.nu! Denna sidan kan inte hållas vid liv av bara reklam vilket gör att för att fortsätta att hålla sidan vid liv så skulle jag vilja be om donationer. När det kommit in donationer för att kunna betala ett års upptid till så kommer denna popup att försvinna.</p>
+            <div style="display: flex; width: 100%; align-items: center; justify-content: center;">
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                    <input type="hidden" name="cmd" value="_s-xclick">
+                    <input type="hidden" name="hosted_button_id" value="T7JUKPMPCKTBW">
+                    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                    <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                </form>
+
+                <a href="javascript:showSwish()"><img lazy-load="/images/getswish_qr.png" style="max-width: 100px; margin-left: 20px;" /></a>
+            </div>
+            <p>Swish nummer: 0704-15 15 86</p>
+
+            <div style="display: flex; flex-direction: row-reverse;">
+                <md-button ng-click="vm.Ok();" class="md-primary md-raised">Stäng</md-button>
+            </div>
+        </div>
     </script>
 
 </body>
