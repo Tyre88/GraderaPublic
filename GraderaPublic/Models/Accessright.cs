@@ -12,30 +12,31 @@ namespace GraderaPublic.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Technique
+    public partial class Accessright
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Technique()
+        public Accessright()
         {
-            this.Grade_Category_Link_Technique = new HashSet<Grade_Category_Link_Technique>();
-            this.Technique_Image = new HashSet<Technique_Image>();
-            this.TrainingExerciseLinkTechnique = new HashSet<TrainingExerciseLinkTechnique>();
+            this.AccountAccess = new HashSet<AccountAccess>();
+            this.Accessright_Right = new HashSet<Accessright_Right>();
+            this.Accessright_Right1 = new HashSet<Accessright_Right>();
+            this.GenericItemPermission = new HashSet<GenericItemPermission>();
         }
     
-        public int Id { get; set; }
-        public int ClubId { get; set; }
+        public int ID { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-        public int TechniqueTypeId { get; set; }
-        public bool IsGlobal { get; set; }
+        public int ClubId { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<AccountAccess> AccountAccess { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Accessright_Right> Accessright_Right { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Accessright_Right> Accessright_Right1 { get; set; }
         public virtual Club Club { get; set; }
+        public virtual Club Club1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Grade_Category_Link_Technique> Grade_Category_Link_Technique { get; set; }
-        public virtual Technique_Type Technique_Type { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Technique_Image> Technique_Image { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TrainingExerciseLinkTechnique> TrainingExerciseLinkTechnique { get; set; }
+        public virtual ICollection<GenericItemPermission> GenericItemPermission { get; set; }
     }
 }

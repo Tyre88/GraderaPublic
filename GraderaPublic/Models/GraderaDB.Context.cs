@@ -38,5 +38,46 @@ namespace GraderaPublic.Models
         public virtual DbSet<Type> Type { get; set; }
         public virtual DbSet<Wordlist> Wordlist { get; set; }
         public virtual DbSet<AdvertisementShow> AdvertisementShow { get; set; }
+        public virtual DbSet<Accessright> Accessright { get; set; }
+        public virtual DbSet<Accessright_Right> Accessright_Right { get; set; }
+        public virtual DbSet<Account_Information> Account_Information { get; set; }
+        public virtual DbSet<Account_Information_Generic> Account_Information_Generic { get; set; }
+        public virtual DbSet<Account_Information_Generic_Value> Account_Information_Generic_Value { get; set; }
+        public virtual DbSet<Account_Session> Account_Session { get; set; }
+        public virtual DbSet<AccountAccess> AccountAccess { get; set; }
+        public virtual DbSet<Club> Club { get; set; }
+        public virtual DbSet<ClubLinkModule> ClubLinkModule { get; set; }
+        public virtual DbSet<Competition> Competition { get; set; }
+        public virtual DbSet<Competition_Category> Competition_Category { get; set; }
+        public virtual DbSet<Competition_External_Competitor> Competition_External_Competitor { get; set; }
+        public virtual DbSet<Competition_External_Competitor_Contact_Person> Competition_External_Competitor_Contact_Person { get; set; }
+        public virtual DbSet<Competition_Internal_Competitor> Competition_Internal_Competitor { get; set; }
+        public virtual DbSet<Contact> Contact { get; set; }
+        public virtual DbSet<Form> Form { get; set; }
+        public virtual DbSet<Form_Emails> Form_Emails { get; set; }
+        public virtual DbSet<FormExternalSubmitValues> FormExternalSubmitValues { get; set; }
+        public virtual DbSet<FormFields> FormFields { get; set; }
+        public virtual DbSet<FormFieldsOptions> FormFieldsOptions { get; set; }
+        public virtual DbSet<FormSubmitValues> FormSubmitValues { get; set; }
+        public virtual DbSet<GenericFile> GenericFile { get; set; }
+        public virtual DbSet<GenericItemPermission> GenericItemPermission { get; set; }
+        public virtual DbSet<Grade> Grade { get; set; }
+        public virtual DbSet<Grade_Category> Grade_Category { get; set; }
+        public virtual DbSet<Grade_Category_Link> Grade_Category_Link { get; set; }
+        public virtual DbSet<Grade_Category_Link_Technique> Grade_Category_Link_Technique { get; set; }
+        public virtual DbSet<GradingBooklet> GradingBooklet { get; set; }
+        public virtual DbSet<LoginLog> LoginLog { get; set; }
+        public virtual DbSet<MediabankFile> MediabankFile { get; set; }
+        public virtual DbSet<Module> Module { get; set; }
+        public virtual DbSet<ModuleLink> ModuleLink { get; set; }
+        public virtual DbSet<Newsletter_Send> Newsletter_Send { get; set; }
+        public virtual DbSet<Newsletter_Send_Item> Newsletter_Send_Item { get; set; }
+        public virtual DbSet<Newsletters> Newsletters { get; set; }
+        public virtual DbSet<ProductImages> ProductImages { get; set; }
+        public virtual DbSet<Products> Products { get; set; }
+        public virtual DbSet<Technique_Image> Technique_Image { get; set; }
+        public virtual DbSet<Technique_Type> Technique_Type { get; set; }
+        public virtual DbSet<TrainingExercise> TrainingExercise { get; set; }
+        public virtual DbSet<TrainingExerciseLinkTechnique> TrainingExerciseLinkTechnique { get; set; }
     }
 }

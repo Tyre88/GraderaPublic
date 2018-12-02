@@ -12,56 +12,63 @@ namespace GraderaPublic.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Account
+    public partial class Club
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Account()
+        public Club()
         {
-            this.AccountAccess = new HashSet<AccountAccess>();
-            this.Account_Information_Generic_Value = new HashSet<Account_Information_Generic_Value>();
-            this.Account_Information_Generic_Value1 = new HashSet<Account_Information_Generic_Value>();
-            this.Account_Information = new HashSet<Account_Information>();
-            this.Account_Session = new HashSet<Account_Session>();
-            this.Competition_Internal_Competitor = new HashSet<Competition_Internal_Competitor>();
+            this.Accessright = new HashSet<Accessright>();
+            this.Accessright1 = new HashSet<Accessright>();
+            this.Account = new HashSet<Account>();
+            this.ClubLinkModule = new HashSet<ClubLinkModule>();
+            this.ClubLinkModule1 = new HashSet<ClubLinkModule>();
             this.Competition = new HashSet<Competition>();
             this.Competition1 = new HashSet<Competition>();
+            this.Contact = new HashSet<Contact>();
+            this.Contact1 = new HashSet<Contact>();
             this.Form = new HashSet<Form>();
             this.FormSubmitValues = new HashSet<FormSubmitValues>();
             this.GenericItemPermission = new HashSet<GenericItemPermission>();
+            this.Grade = new HashSet<Grade>();
+            this.Grade_Category = new HashSet<Grade_Category>();
+            this.GradingBooklet = new HashSet<GradingBooklet>();
+            this.GradingBooklet1 = new HashSet<GradingBooklet>();
             this.LoginLog = new HashSet<LoginLog>();
             this.MediabankFile = new HashSet<MediabankFile>();
-            this.Newsletters = new HashSet<Newsletters>();
-            this.Newsletter_Send_Item = new HashSet<Newsletter_Send_Item>();
+            this.ModuleLink = new HashSet<ModuleLink>();
+            this.ModuleLink1 = new HashSet<ModuleLink>();
             this.Newsletter_Send = new HashSet<Newsletter_Send>();
+            this.Newsletters = new HashSet<Newsletters>();
+            this.Technique = new HashSet<Technique>();
+            this.Technique_Type = new HashSet<Technique_Type>();
             this.TrainingExercise = new HashSet<TrainingExercise>();
         }
     
-        public int ID { get; set; }
-        public string UserName { get; set; }
-        public string Password { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public int ClubId { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Settings { get; set; }
         public string Image { get; set; }
-        public int Gender { get; set; }
+        public string ShortName { get; set; }
+        public string Description { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<AccountAccess> AccountAccess { get; set; }
-        public virtual Club Club { get; set; }
+        public virtual ICollection<Accessright> Accessright { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Account_Information_Generic_Value> Account_Information_Generic_Value { get; set; }
+        public virtual ICollection<Accessright> Accessright1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Account_Information_Generic_Value> Account_Information_Generic_Value1 { get; set; }
+        public virtual ICollection<Account> Account { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Account_Information> Account_Information { get; set; }
+        public virtual ICollection<ClubLinkModule> ClubLinkModule { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Account_Session> Account_Session { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Competition_Internal_Competitor> Competition_Internal_Competitor { get; set; }
+        public virtual ICollection<ClubLinkModule> ClubLinkModule1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Competition> Competition { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Competition> Competition1 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Contact> Contact { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Contact> Contact1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Form> Form { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
@@ -69,15 +76,29 @@ namespace GraderaPublic.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<GenericItemPermission> GenericItemPermission { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Grade> Grade { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Grade_Category> Grade_Category { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<GradingBooklet> GradingBooklet { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<GradingBooklet> GradingBooklet1 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<LoginLog> LoginLog { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<MediabankFile> MediabankFile { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Newsletters> Newsletters { get; set; }
+        public virtual ICollection<ModuleLink> ModuleLink { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Newsletter_Send_Item> Newsletter_Send_Item { get; set; }
+        public virtual ICollection<ModuleLink> ModuleLink1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Newsletter_Send> Newsletter_Send { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Newsletters> Newsletters { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Technique> Technique { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Technique_Type> Technique_Type { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TrainingExercise> TrainingExercise { get; set; }
     }

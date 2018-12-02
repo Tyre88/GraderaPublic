@@ -1,4 +1,25 @@
-﻿self.addEventListener("install", function (e) {
+﻿var cacheName = 'v2';
+var cacheFiles = [
+    "/js/headjs.min.js",
+    "/js/jquery.min.js",
+    "/Scripts/jquery.validate.min.js",
+    "/Scripts/jquery.validate.unobtrusive.min.js",
+    "/Content/Javascript/TecHover.js",
+    "/content/javascript/advertisement.js",
+    "https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js",
+    "https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular-animate.min.js",
+    "https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular-aria.min.js",
+    "https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular-messages.min.js",
+    "https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.5/angular-material.min.js",
+
+    "/Content/templatemo_style.css",
+    "/content/css/advertisement.css",
+    "https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.5/angular-material.min.css",
+    "/Content/nivo-slider.css",
+    "/js/jquery.nivo.slider.js"
+];
+
+self.addEventListener("install", function (e) {
     console.log('[ServiceWorker] Installed');
 
     e.waitUntil(
@@ -19,7 +40,7 @@ self.addEventListener("activate", function (e) {
                     console.log('[ServiceWorker] removing cache files from: ', thisCacheName);
                     return caches.delete(thisCacheName);
                 }
-            }))
+            }));
         })
     );
 });
@@ -36,5 +57,5 @@ self.addEventListener("fetch", function (e) {
 
             return fetch(e.request);
         })
-    )
+    );
 });

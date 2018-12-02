@@ -12,26 +12,22 @@ namespace GraderaPublic.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class TECHNICS
+    public partial class Grade_Category_Link
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public TECHNICS()
+        public Grade_Category_Link()
         {
-            this.Image = new HashSet<Image>();
-            this.Movie = new HashSet<Movie>();
+            this.Grade_Category_Link_Technique = new HashSet<Grade_Category_Link_Technique>();
         }
     
-        public int id { get; set; }
-        public string name { get; set; }
-        public string desc { get; set; }
-        public string belt { get; set; }
-        public Nullable<int> type_id { get; set; }
-        public string descEn { get; set; }
+        public int Id { get; set; }
+        public int GradeCategoryId { get; set; }
+        public int GradeId { get; set; }
+        public string Text { get; set; }
     
+        public virtual Grade Grade { get; set; }
+        public virtual Grade_Category Grade_Category { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Image> Image { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Movie> Movie { get; set; }
-        public virtual Type Type { get; set; }
+        public virtual ICollection<Grade_Category_Link_Technique> Grade_Category_Link_Technique { get; set; }
     }
 }

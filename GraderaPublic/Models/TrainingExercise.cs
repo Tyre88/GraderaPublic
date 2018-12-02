@@ -12,26 +12,27 @@ namespace GraderaPublic.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class TECHNICS
+    public partial class TrainingExercise
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public TECHNICS()
+        public TrainingExercise()
         {
-            this.Image = new HashSet<Image>();
-            this.Movie = new HashSet<Movie>();
+            this.TrainingExerciseLinkTechnique = new HashSet<TrainingExerciseLinkTechnique>();
         }
     
-        public int id { get; set; }
-        public string name { get; set; }
-        public string desc { get; set; }
-        public string belt { get; set; }
-        public Nullable<int> type_id { get; set; }
-        public string descEn { get; set; }
+        public int Id { get; set; }
+        public int ClubId { get; set; }
+        public int CreatedByUser { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public int AverageTime { get; set; }
+        public int ExerciseType { get; set; }
+        public bool IsDeleted { get; set; }
+        public bool IsGlobal { get; set; }
     
+        public virtual Account Account { get; set; }
+        public virtual Club Club { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Image> Image { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Movie> Movie { get; set; }
-        public virtual Type Type { get; set; }
+        public virtual ICollection<TrainingExerciseLinkTechnique> TrainingExerciseLinkTechnique { get; set; }
     }
 }

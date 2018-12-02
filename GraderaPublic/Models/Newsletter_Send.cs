@@ -12,26 +12,27 @@ namespace GraderaPublic.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class TECHNICS
+    public partial class Newsletter_Send
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public TECHNICS()
+        public Newsletter_Send()
         {
-            this.Image = new HashSet<Image>();
-            this.Movie = new HashSet<Movie>();
+            this.Newsletter_Send_Item = new HashSet<Newsletter_Send_Item>();
         }
     
-        public int id { get; set; }
-        public string name { get; set; }
-        public string desc { get; set; }
-        public string belt { get; set; }
-        public Nullable<int> type_id { get; set; }
-        public string descEn { get; set; }
+        public int Id { get; set; }
+        public int NewsletterId { get; set; }
+        public System.DateTime SendDate { get; set; }
+        public int UserSendId { get; set; }
+        public int ClubId { get; set; }
+        public string NewsletterContent { get; set; }
+        public string NewsletterName { get; set; }
+        public string NewsletterSendGUID { get; set; }
     
+        public virtual Account Account { get; set; }
+        public virtual Club Club { get; set; }
+        public virtual Newsletters Newsletters { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Image> Image { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Movie> Movie { get; set; }
-        public virtual Type Type { get; set; }
+        public virtual ICollection<Newsletter_Send_Item> Newsletter_Send_Item { get; set; }
     }
 }

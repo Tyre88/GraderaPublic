@@ -171,7 +171,28 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helpers\EnumerableExtension.cs" />
+    <Compile Include="Models\Accessright.cs">
+      <DependentUpon>GraderaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Accessright_Right.cs">
+      <DependentUpon>GraderaDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Account.cs">
+      <DependentUpon>GraderaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountAccess.cs">
+      <DependentUpon>GraderaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Account_Information.cs">
+      <DependentUpon>GraderaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Account_Information_Generic.cs">
+      <DependentUpon>GraderaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Account_Information_Generic_Value.cs">
+      <DependentUpon>GraderaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Account_Session.cs">
       <DependentUpon>GraderaDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Advertisement.cs">
@@ -184,13 +205,64 @@
     <Compile Include="Models\AdvertisementShow.cs">
       <DependentUpon>GraderaDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Club.cs">
+      <DependentUpon>GraderaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ClubLinkModule.cs">
+      <DependentUpon>GraderaDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Combination.cs">
       <DependentUpon>GraderaDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Combination_Technique.cs">
       <DependentUpon>GraderaDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Competition.cs">
+      <DependentUpon>GraderaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Competition_Category.cs">
+      <DependentUpon>GraderaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Competition_External_Competitor.cs">
+      <DependentUpon>GraderaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Competition_External_Competitor_Contact_Person.cs">
+      <DependentUpon>GraderaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Competition_Internal_Competitor.cs">
+      <DependentUpon>GraderaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Contact.cs">
+      <DependentUpon>GraderaDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Feedback.cs" />
+    <Compile Include="Models\Form.cs">
+      <DependentUpon>GraderaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FormExternalSubmitValues.cs">
+      <DependentUpon>GraderaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FormFields.cs">
+      <DependentUpon>GraderaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FormFieldsOptions.cs">
+      <DependentUpon>GraderaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FormSubmitValues.cs">
+      <DependentUpon>GraderaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Form_Emails.cs">
+      <DependentUpon>GraderaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GenericFile.cs">
+      <DependentUpon>GraderaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GenericItemPermission.cs">
+      <DependentUpon>GraderaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Grade.cs">
+      <DependentUpon>GraderaDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\GraderaDB.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -206,10 +278,49 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GraderaDB.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\Grade_Category.cs">
+      <DependentUpon>GraderaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Grade_Category_Link.cs">
+      <DependentUpon>GraderaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Grade_Category_Link_Technique.cs">
+      <DependentUpon>GraderaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GradingBooklet.cs">
+      <DependentUpon>GraderaDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Image.cs">
       <DependentUpon>GraderaDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\LoginLog.cs">
+      <DependentUpon>GraderaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MediabankFile.cs">
+      <DependentUpon>GraderaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Module.cs">
+      <DependentUpon>GraderaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModuleLink.cs">
+      <DependentUpon>GraderaDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Movie.cs">
+      <DependentUpon>GraderaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Newsletters.cs">
+      <DependentUpon>GraderaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Newsletter_Send.cs">
+      <DependentUpon>GraderaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Newsletter_Send_Item.cs">
+      <DependentUpon>GraderaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductImages.cs">
+      <DependentUpon>GraderaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Products.cs">
       <DependentUpon>GraderaDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Search.cs">
@@ -219,6 +330,18 @@
       <DependentUpon>GraderaDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Technique.cs">
+      <DependentUpon>GraderaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Technique_Image.cs">
+      <DependentUpon>GraderaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Technique_Type.cs">
+      <DependentUpon>GraderaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TrainingExercise.cs">
+      <DependentUpon>GraderaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TrainingExerciseLinkTechnique.cs">
       <DependentUpon>GraderaDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Type.cs">

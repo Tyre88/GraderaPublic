@@ -12,30 +12,27 @@ namespace GraderaPublic.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Technique
+    public partial class Competition_Category
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Technique()
+        public Competition_Category()
         {
-            this.Grade_Category_Link_Technique = new HashSet<Grade_Category_Link_Technique>();
-            this.Technique_Image = new HashSet<Technique_Image>();
-            this.TrainingExerciseLinkTechnique = new HashSet<TrainingExerciseLinkTechnique>();
+            this.Competition_External_Competitor = new HashSet<Competition_External_Competitor>();
+            this.Competition_External_Competitor1 = new HashSet<Competition_External_Competitor>();
+            this.Competition_Internal_Competitor = new HashSet<Competition_Internal_Competitor>();
         }
     
         public int Id { get; set; }
-        public int ClubId { get; set; }
         public string Name { get; set; }
-        public string Description { get; set; }
-        public int TechniqueTypeId { get; set; }
-        public bool IsGlobal { get; set; }
+        public int CompetitionId { get; set; }
     
-        public virtual Club Club { get; set; }
+        public virtual Competition Competition { get; set; }
+        public virtual Competition Competition1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Grade_Category_Link_Technique> Grade_Category_Link_Technique { get; set; }
-        public virtual Technique_Type Technique_Type { get; set; }
+        public virtual ICollection<Competition_External_Competitor> Competition_External_Competitor { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Technique_Image> Technique_Image { get; set; }
+        public virtual ICollection<Competition_External_Competitor> Competition_External_Competitor1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TrainingExerciseLinkTechnique> TrainingExerciseLinkTechnique { get; set; }
+        public virtual ICollection<Competition_Internal_Competitor> Competition_Internal_Competitor { get; set; }
     }
 }

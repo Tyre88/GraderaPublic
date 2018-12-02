@@ -12,26 +12,28 @@ namespace GraderaPublic.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class TECHNICS
+    public partial class Products
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public TECHNICS()
+        public Products()
         {
-            this.Image = new HashSet<Image>();
-            this.Movie = new HashSet<Movie>();
+            this.ProductImages = new HashSet<ProductImages>();
         }
     
-        public int id { get; set; }
-        public string name { get; set; }
-        public string desc { get; set; }
-        public string belt { get; set; }
-        public Nullable<int> type_id { get; set; }
-        public string descEn { get; set; }
+        public int ID { get; set; }
+        public string Header { get; set; }
+        public string Description { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string PhoneNumber { get; set; }
+        public string Email { get; set; }
+        public System.DateTime AddedDate { get; set; }
+        public string GUID { get; set; }
+        public bool Active { get; set; }
+        public int Price { get; set; }
+        public string Size { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Image> Image { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Movie> Movie { get; set; }
-        public virtual Type Type { get; set; }
+        public virtual ICollection<ProductImages> ProductImages { get; set; }
     }
 }
