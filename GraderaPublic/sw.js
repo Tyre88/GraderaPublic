@@ -1,4 +1,4 @@
-﻿var cacheName = 'v2';
+﻿var cacheName = 'v1';
 var cacheFiles = [
     "/js/headjs.min.js",
     "/js/jquery.min.js",
@@ -49,13 +49,20 @@ self.addEventListener("fetch", function (e) {
     console.log('[ServiceWorker] Fetched', e.request.url);
 
     e.respondWith(
-        caches.match(e.request).then(function (response) {
-            if (response) {
-                console.log('[ServiceWorker] found in cache', e.request.url);
-                return response;
-            }
 
-            return fetch(e.request);
+        caches.open(cacheName).then(cache => {
+            return cache.match(e.request).then(response => {
+                return response || fetch(e.request).then(response => {
+                    cache.put(e.request, response.clone());
+                    return response;
+                });
+            });
         })
+
+        //caches.match(e.request).then(function (response) {
+        //    return response || fetch(e.request).then((response) => {
+        //        cache
+        //    });
+        //})
     );
 });
