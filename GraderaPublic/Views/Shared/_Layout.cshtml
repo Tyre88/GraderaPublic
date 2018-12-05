@@ -14,11 +14,17 @@
     <title>Gradera Judo - graderings information online</title>
     <link rel="manifest" href="/manifest.json">
     <script src="../../js/headjs.min.js" type="text/javascript"></script>
+    <link rel="preload" href="/content/Site.css" as="style">
+    <link rel="preload" href="../../Content/templatemo_style.css" as="style">
+    <link rel="preload" href="../../Content/nivo-slider.css" as="style">
+    <link rel="preload" href="../../Content/nivo-slider.css" as="style">
 
     <script type="text/javascript">
+        head.js("../../js/jquery.min.js");
+        head.js("../../js/jquery.nivo.slider.js");
         head.js("/Scripts/jquery.validate.min.js").js("/Scripts/jquery.validate.unobtrusive.min.js").js("../../Content/Javascript/TecHover.js");
         head.js("../../content/javascript/advertisement.js");
-        head.js("../../content/Site.css");
+        head.js("../../content/css/advertisement.css");
 
         head.js("/app.js");
 
@@ -28,11 +34,16 @@
             .js("https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular-messages.min.js")
             .js("https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.5/angular-material.min.js");
         head.js("../../content/javascript/index.js");
+
+        head.js("../../Content/templatemo_style.css");
+        head.js("../../content/css/advertisement.css");
+        head.js("https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.5/angular-material.min.css");
+        head.js("../../Content/nivo-slider.css");
     </script>
 
-    <link href="../../Content/templatemo_style.css" rel="stylesheet" type="text/css" />
-    <link href="../../content/css/advertisement.css" rel="Stylesheet" type="text/css" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.5/angular-material.min.css" rel="stylesheet" />
+    @*<link href="../../Content/templatemo_style.css" rel="stylesheet" type="text/css" />
+        <link href="../../content/css/advertisement.css" rel="Stylesheet" type="text/css" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.5/angular-material.min.css" rel="stylesheet" />*@
 
     <script language="javascript" type="text/javascript">
         function clearText(field) {
@@ -62,10 +73,6 @@
             else if (field.value == '') field.value = field.defaultValue;
         }
     </script>
-
-    <link href="../../Content/nivo-slider.css" rel="stylesheet" type="text/css" />
-    <script src="../../js/jquery.min.js" type="text/javascript"></script>
-    <script src="../../js/jquery.nivo.slider.js" type="text/javascript"></script>
 
 </head>
 <body ng-controller="index" style="height: auto;">
@@ -171,7 +178,7 @@
 
         <div class="content_box">
 
-            <img lazy-load="~/images/getswish_qr_small.png" style="max-width: 600px;" />
+            <img lazy-load="~/images/getswish_qr_small.png" style="max-width: 600px;" alt="betala med swish" />
 
             <p>Swish nummer: 0704-15 15 86</p>
         </div>
@@ -192,10 +199,10 @@
                             <li><a href="../../">Hem</a></li>
                             @*<li><a href="../../Shop">Shoppen</a></li>*@
                             <li><a href="../../Home/Kyu5">5 Kyu <img alt="5 kyu" src="../../Image/Belts/5Kyo.PNG" style="float: right; max-height: 20px;" /></a></li>
-                            <li><a href="../../Home/Kyu4">4 Kyu <img alt="5 kyu" src="../../Image/Belts/4Kyo.PNG" style="float: right; max-height: 20px;" /></a></li>
-                            <li><a href="../../Home/Kyu3">3 Kyu <img alt="5 kyu" src="../../Image/Belts/3Kyo.PNG" style="float: right; max-height: 20px;" /></a></li>
-                            <li><a href="../../Home/Kyu2">2 Kyu <img alt="5 kyu" src="../../Image/Belts/2Kyo.PNG" style="float: right; max-height: 20px;" /></a></li>
-                            <li><a href="../../Home/Kyu1">1 Kyu <img alt="5 kyu" src="../../Image/Belts/1Kyo.PNG" style="float: right; max-height: 20px;" /></a></li>
+                            <li><a href="../../Home/Kyu4">4 Kyu <img alt="4 kyu" src="../../Image/Belts/4Kyo.PNG" style="float: right; max-height: 20px;" /></a></li>
+                            <li><a href="../../Home/Kyu3">3 Kyu <img alt="3 kyu" src="../../Image/Belts/3Kyo.PNG" style="float: right; max-height: 20px;" /></a></li>
+                            <li><a href="../../Home/Kyu2">2 Kyu <img alt="2 kyu" src="../../Image/Belts/2Kyo.PNG" style="float: right; max-height: 20px;" /></a></li>
+                            <li><a href="../../Home/Kyu1">1 Kyu <img alt="1 kyu" src="../../Image/Belts/1Kyo.PNG" style="float: right; max-height: 20px;" /></a></li>
                             @*<li><a href="https://shop.spreadshirt.se/graderajudo/" target="_blank">Shop</a></li>*@
                             <li><a href="../../Home/Technique">Tekniker</a></li>
                             @*<li><a href="../../Combinations">Kombinationer</a></li>*@
@@ -224,7 +231,7 @@
                             <br />
                             <br />*@
 
-                        <a href="javascript:showSwish()"><img src="~/images/getswish_qr_small.png" style="max-width: 250px;" /></a>
+                        <a href="javascript:showSwish()"><img src="~/images/getswish_qr_small.png" style="max-width: 250px;" alt="betala med swish" /></a>
 
                         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
                             <input type="hidden" name="cmd" value="_s-xclick">
@@ -280,7 +287,7 @@
             </div> <!-- end of main -->
             <div id="templatemo_footer">
 
-                <a href="/Home/License">Creative commons</a> <img style="height: 10px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Cc.logo.circle.svg/1024px-Cc.logo.circle.svg.png" /> 2011-2018 | <a href="../../">Gradera.nu</a> | Ett arbete av <a href="mailto:victor@webbdudes.se">Victor Öhrström</a>
+                <a href="/Home/License">Creative commons</a> <img style="height: 10px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Cc.logo.circle.svg/1024px-Cc.logo.circle.svg.png" alt="creative commons" /> 2011-2018 | <a href="../../">Gradera.nu</a> | Ett arbete av <a href="mailto:victor@webbdudes.se">Victor Öhrström</a>
 
             </div> <!-- end of templatemo_footer -->
 
@@ -304,10 +311,10 @@
                     <input type="hidden" name="cmd" value="_s-xclick">
                     <input type="hidden" name="hosted_button_id" value="T7JUKPMPCKTBW">
                     <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-                    <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                    <img alt="paypal" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
                 </form>
 
-                <a href="javascript:showSwish()"><img lazy-load="/images/getswish_qr_small.png" style="max-width: 100px; margin-left: 20px;" /></a>
+                <a href="javascript:showSwish()"><img lazy-load="/images/getswish_qr_small.png" alt="betala med swish" style="max-width: 100px; margin-left: 20px;" /></a>
             </div>
             <p>Swish nummer: 0704-15 15 86</p>
 
