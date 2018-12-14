@@ -46,6 +46,11 @@ namespace GraderaPublic.Controllers
             return View();
         }
 
+        public ActionResult Thanks()
+        {
+            return View();
+        }
+
         public ActionResult Ordlista()
         {
             var wordlist = from w in db.Wordlist

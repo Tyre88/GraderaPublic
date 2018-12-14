@@ -1,0 +1,10 @@
+﻿@{
+    ViewBag.Title = "Gradera Judo - Tack för donationen";
+    //Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = Request.Browser.IsMobileDevice ? "~/Views/Shared/_LayoutMobile.cshtml"
+                                            : "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Tack!</h2>
+
+<p>Tack för donationen, den hjälper till att hålla siten vid liv!</p>
