@@ -1,4 +1,4 @@
-﻿var cacheName = 'v2';
+﻿var cacheName = 'v3';
 var cacheFiles = [
     "/js/headjs.min.js",
     "/js/jquery.min.js",

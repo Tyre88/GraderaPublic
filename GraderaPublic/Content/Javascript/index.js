@@ -26,11 +26,11 @@
         sessionStorage.setItem('donateCounter', vm.ShowCounter);
 
         if (!vm.HasShownDonate || (vm.ShowCounter && ~~vm.ShowCounter == 1)) {
-            $mdDialog.show({
-                controller: donateController,
-                controllerAs: "vm",
-                templateUrl: "donate.html"
-            });
+            //$mdDialog.show({
+            //    controller: donateController,
+            //    controllerAs: "vm",
+            //    templateUrl: "donate.html"
+            //});
         }
 
         donateController.$inject = ["$mdDialog"];
