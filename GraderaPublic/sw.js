@@ -53,8 +53,13 @@ self.addEventListener("fetch", function (e) {
         caches.open(cacheName).then(cache => {
             return cache.match(e.request).then(response => {
                 return response || fetch(e.request).then(response => {
-                    cache.put(e.request, response.clone());
-                    return response;
+                    if (e.request.url.indexOf('api') > 0) {
+                        return response;
+                    }
+                    else {
+                        cache.put(e.request, response.clone());
+                        return response;
+                    }
                 });
             });
         })
