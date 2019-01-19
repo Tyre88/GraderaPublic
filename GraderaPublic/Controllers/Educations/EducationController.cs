@@ -1,4 +1,5 @@
-﻿using Gradera.Education.DAL;
+﻿using Gradera.Education.BLL;
+using Gradera.Education.DAL;
 using Gradera.Education.Entities;
 using System;
 using System.Collections.Generic;
@@ -12,11 +13,10 @@ namespace GraderaPublic.Controllers.Educations
 {
     public class EducationController : ApiController
     {
-        readonly EducationDbContext _educationDbContext;
-
+        readonly EducationBLL _educationBLL;
         public EducationController()
         {
-            _educationDbContext = new EducationDbContext();
+            _educationBLL = new EducationBLL();
         }
 
         [HttpGet]
@@ -24,7 +24,7 @@ namespace GraderaPublic.Controllers.Educations
         {
             HttpResponseMessage response = new HttpResponseMessage(HttpStatusCode.OK);
 
-            response.Content = new ObjectContent<Education>(_educationDbContext.Educations.FirstOrDefault(e => e.Id == id), new JsonMediaTypeFormatter());
+            response.Content = new ObjectContent<Education>(_educationBLL.GetEducation(id), new JsonMediaTypeFormatter());
 
             return response;
         }

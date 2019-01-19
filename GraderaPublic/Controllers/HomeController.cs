@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Gradera.Education.BLL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Mail;
@@ -146,5 +147,14 @@ namespace GraderaPublic.Controllers
             return Content(result, "text/html");
         }
         #endregion
+
+        public ActionResult Education(string id)
+        {
+            EducationBLL _educationBLL = new EducationBLL();
+
+            Gradera.Education.Entities.Education education = _educationBLL.GetEducation(id);
+
+            return View(education);
+        }
     }
 }

@@ -48,6 +48,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\EducationBLL.cs" />
+    <Compile Include="DAL\EducationDAL.cs" />
     <Compile Include="DAL\EducationDbContext.cs" />
     <Compile Include="Entities\Education.cs" />
     <Compile Include="Entities\EducationQuestion.cs" />
@@ -66,9 +68,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="BLL\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
