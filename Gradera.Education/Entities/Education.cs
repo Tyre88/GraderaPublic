@@ -10,7 +10,8 @@ namespace Gradera.Education.Entities
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public string Data { get; set; }
+        public string Description { get; set; }
         public bool IsFeatured { get; set; }
+        public ICollection<EducationQuestion> Questions { get; set; }
     }
 }

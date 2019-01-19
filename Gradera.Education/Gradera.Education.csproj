@@ -50,9 +50,18 @@
   <ItemGroup>
     <Compile Include="DAL\EducationDbContext.cs" />
     <Compile Include="Entities\Education.cs" />
+    <Compile Include="Entities\EducationQuestion.cs" />
     <Compile Include="Migrations\201901172242312_Education.cs" />
     <Compile Include="Migrations\201901172242312_Education.Designer.cs">
       <DependentUpon>201901172242312_Education.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901191107553_education-question.cs" />
+    <Compile Include="Migrations\201901191107553_education-question.Designer.cs">
+      <DependentUpon>201901191107553_education-question.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901191109385_education-question-alternatives.cs" />
+    <Compile Include="Migrations\201901191109385_education-question-alternatives.Designer.cs">
+      <DependentUpon>201901191109385_education-question-alternatives.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -67,6 +76,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201901172242312_Education.resx">
       <DependentUpon>201901172242312_Education.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901191107553_education-question.resx">
+      <DependentUpon>201901191107553_education-question.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901191109385_education-question-alternatives.resx">
+      <DependentUpon>201901191109385_education-question-alternatives.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
