@@ -62,7 +62,8 @@ a.more:hover { text-decoration: none; color: #000; }
 #templatemo_wrapper {
 	width: 940px;
 	margin: 0 auto;
-	background: url(images/templatemo_wrapper.jpg) top center no-repeat	
+	background: url(images/templatemo_wrapper.jpg) top center no-repeat;
+    position: relative;
 }
 
 #templatemo_top {
