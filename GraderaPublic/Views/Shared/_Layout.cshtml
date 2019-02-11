@@ -41,10 +41,6 @@
         head.js("../../Content/nivo-slider.css");
     </script>
 
-    @*<link href="../../Content/templatemo_style.css" rel="stylesheet" type="text/css" />
-        <link href="../../content/css/advertisement.css" rel="Stylesheet" type="text/css" />
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.5/angular-material.min.css" rel="stylesheet" />*@
-
     <script language="javascript" type="text/javascript">
         function clearText(field) {
             if (field.defaultValue == field.value) field.value = '';
@@ -76,38 +72,6 @@
 
 </head>
 <body ng-controller="index" style="height: auto;">
-
-    @*<div style="
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: 150px;
-        line-height: 25px;
-        width: 100%;
-        background-color: rgba(0,0,0,.75);">
-            <span style="
-        text-align: center;
-        display: block;">
-                Kära användare av Gradera.nu! Denna sidan kan inte hållas vid liv av bara reklam vilket gör att för att fortsätta att hålla sidan vid liv så skulle jag vilja be om donationer. När det kommit in donationer för att kunna betala ett års upptid till så kommer denna banner att försvinna.
-                <br />
-                Du kan även handla i shoppen för att bidra till att gradera.nu hålls vid liv! <a href="https://shop.spreadshirt.se/graderajudo/" target="_blank">till shoppen!</a>
-
-                <div style="display: flex; width: 100%; align-items: center; justify-content: center;">
-                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-                        <input type="hidden" name="cmd" value="_s-xclick">
-                        <input type="hidden" name="hosted_button_id" value="T7JUKPMPCKTBW">
-                        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-                        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-                    </form>
-
-                    <a href="javascript:showSwish()"><img src="~/images/getswish_qr.png" style="max-width: 75px; margin-left: 20px;" /></a>
-                    <span style="margin-left: 25px;">Swish nummer: 0704-151586</span>
-                </div>
-
-            </span>
-        </div>*@
-
-
     <div id="fb-root"></div>
     <script type="text/javascript">
         (function (d, s, id) {
@@ -117,61 +81,6 @@
             js.src = "//connect.facebook.net/sv_SE/all.js#xfbml=1";
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));</script>
-
-    <div id="fader" style="z-index: 100; position:fixed; height:auto; width:auto; top:0; left:0; bottom:0; right:0; background: Black; display:none; opacity: .5; filter: alpha(opacity=50);"></div>
-    <div id="feedback" style="z-index:201;	text-align: left;	background-color: #28241e; display: none;	width: 700px; border: solid 1px;	position: fixed;	top: 100px;	z-index: 101;	left: 50%;	margin-left: -350px; padding: 10px;">
-        <p><a href="javascript:closeFeedback()" style="float: right; background: none; ">Stäng</a></p>
-
-        <div class="content_box">
-            <div id="cp_contact_form">
-
-                <h4>Kontakta</h4>
-
-                <div style="float:right; width: 250px;">
-                    <ul class="tmo_list">
-                        <li>Problem: Ifall ni stöter på någort problem i sidan så skulle vi gärna vela veta det för att åtgärda felet.</li>
-                        <li>Förslag: Har du något förslag på någon förbättring, tveka inte. Meddela oss detta.</li>
-                        <li>Ställ en fråga: Har du någon fråga eller vill bara säga "hej" så gör gärna detta.</li>
-                        <li>Bilder: Hittar du nån bild/video du inte är nöjd med och kanske har en bättre så tar vi gärna del av detta.</li>
-                        <br />
-                        <li>Vi är ute efter att vara den bästa sidan på nätet för att informera dig om vad som gäller för just din gradering.</li>
-                    </ul>
-                </div>
-
-                <form id="sendForm" method="post" name="Feedback" action="#">
-
-                    <div id="nameDiv">
-                        <label for="name">Namn:</label> <input name="Namn" type="text" class="input_field" id="name" maxlength="60" />
-                        <span id="nameValid" style='color: #FF0000; font-style: normal; font-size: 12px; margin-left: 20px;'>*</span>
-                    </div>
-
-                    <div id="emailDiv">
-                        <label for="email">E-post:</label> <input name="email" type="text" class="input_field" id="email" maxlength="60" />
-                        <span id="emailValid" style='color: #FF0000; font-style: normal; font-size: 12px; margin-left: 20px;'>*</span>
-                    </div>
-
-                    <label for="subject">Rubrik:</label> <input name="Rubrik" type="text" class="input_field" id="subject" maxlength="60" />
-
-                    <div id="messageDiv">
-                        <label for="text">Meddelande:</label> <textarea id="text" name="text" rows="0" cols="0" class="required"></textarea>
-                        <span id="messageValid" style='color: #FF0000; font-style: normal; font-size: 12px; margin-left: 20px;'>*</span>
-                    </div>
-                    <div class="cleaner_h10"></div>
-
-                    <input type="button" class="submit_btn float_l" name="submit" id="submit" value="Skicka" onclick="javascript:sendFeedback()" />
-                    <input type="reset" class="submit_btn float_r" name="reset" id="reset" value="Återställ" />
-
-                </form>
-                <div class="cleaner_h10"></div>
-
-                <div id="valid" style="display: none;"></div>
-
-            </div>
-
-        </div>
-
-    </div>
-
 
     <div id="swish" style="z-index:201;	text-align: left;	background-color: #28241e; display: none;	width: 700px; border: solid 1px;	position: fixed;	top: 100px;	z-index: 101;	left: 50%;	margin-left: -350px; padding: 10px;">
         <p><a href="javascript:closeSwish()" style="float: right; background: none; ">Stäng</a></p>
@@ -210,7 +119,6 @@
                             <li><a href="../../Home/Kodord">Judons kodord</a></li>
                             <!--<li><a href="../../products/getproducts">Köp och sälj</a></li>-->
                             <li><a href="https://club.gradera.nu/external.html#/show/form/TestKlubb/Beta" target="_blank">Gradera klubb</a></li>
-                            <li><a href="javascript:showFeedback()">Kontakt</a></li>
                         </ul>
                     </div>
 
@@ -224,13 +132,6 @@
 
                     <div class="sb_box_annons">
                         <h6>Stöd oss!</h6>
-                        @*<script type="text/javascript">
-                        var uri = 'http://impse.tradedoubler.com/imp?type(js)pool(466916)a(2050323)' + new String(Math.random()).substring(2, 11);
-                        document.write('<sc' + 'ript type="text/javascript" src="' + uri + '" charset="ISO-8859-1"></sc' + 'ript>');
-                    </script>
-                    <br />
-                    <br />*@
-
                         <a href="javascript:showSwish()"><img src="~/images/getswish_qr_small.png" style="max-width: 250px;" alt="betala med swish" /></a>
 
                         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
@@ -241,7 +142,7 @@
                         </form>
 
 
-                        <div class="sb_box">
+                        @*<div class="sb_box">
                             <div class="fb-like" data-href="http://www.facebook.com/GraderaJudo" data-send="false" data-layout="box_count" data-width="120" data-show-faces="false" data-colorscheme="dark"></div>
 
                             <div id="google_play">
@@ -255,7 +156,7 @@
                             </div>
 
 
-                        </div>
+                        </div>*@
 
                         <div class="cleaner"></div>
                     </div>
