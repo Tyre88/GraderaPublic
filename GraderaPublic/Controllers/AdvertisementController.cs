@@ -57,12 +57,10 @@ namespace GraderaPublic.Controllers
             {
                 case "top":
                     return POSITION_TOP;
-                    break;
                 case "left":
                     return POSITION_LEFT;
                 default:
                     return POSITION_TOP;
-                    break;
             }
         }
 
