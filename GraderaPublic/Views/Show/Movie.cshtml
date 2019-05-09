@@ -3,8 +3,8 @@
 @{
     foreach (var item in Model)
     {
-        <iframe title="@item.TECHNICS.name" class="youtube-player" type="text/html"
-                width="600" height="440" lazy-load="@item.url"
+        <iframe title="@item.TECHNICS.name" class="youtube-player" type="text/html" loading="lazy"
+                width="600" height="440" src="@item.url"
                 frameborder="0"></iframe>
     }
 }
