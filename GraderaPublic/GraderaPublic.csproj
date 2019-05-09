@@ -448,6 +448,7 @@
     <Content Include="images\getswish_qr.png" />
     <Content Include="images\getswish_qr_small.png" />
     <Content Include="images\icon-128.png" />
+    <Content Include="images\icon-16.png" />
     <Content Include="images\icon-192.png" />
     <Content Include="images\icon-200.png" />
     <Content Include="images\icon-256.png" />

@@ -1,4 +1,4 @@
-﻿var cacheName = 'v7';
+﻿var cacheName = 'v8';
 
 self.addEventListener("install", function (e) {
     console.log('[ServiceWorker] Installed');
